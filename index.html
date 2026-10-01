@@ -74,9 +74,50 @@ body{background:#050505;color:#fff;cursor:crosshair}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 .navlink{transition:all .3s}.navlink:hover{padding-left:1.5rem;background:rgba(138,3,3,.2)}
 .navlink.active{background:linear-gradient(90deg,rgba(138,3,3,.6),transparent);border-left:3px solid #ff0a0a;color:#fff}
+
+/* ================= FIREBASE AUTH - AISLADO ================= */
+#rs-auth-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:1rem;background:radial-gradient(circle at center,rgba(26,26,26,.98),rgba(0,0,0,.995))}
+#rs-auth-gate.rs-auth-hidden{display:none!important}
+.rs-auth-box{width:min(100%,420px);background:#111;border:1px solid rgba(138,3,3,.65);box-shadow:0 0 45px rgba(138,3,3,.28);padding:2rem;text-align:center}
+.rs-auth-logo{width:72px;height:72px;margin:0 auto 1rem;color:#ff0a0a}
+.rs-auth-title{font-family:'UnifrakturMaguntia',cursive;font-size:3.3rem;line-height:1;color:#fff;text-shadow:0 0 14px rgba(255,10,10,.45)}
+.rs-auth-subtitle{font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:#8b8b8b;margin:.4rem 0 1.5rem}
+.rs-auth-box input{width:100%;box-sizing:border-box;background:#050505;border:1px solid rgba(255,255,255,.18);color:#fff;padding:.8rem 1rem;margin-bottom:.75rem}
+.rs-auth-box input:focus{outline:none;border-color:#ff0a0a;box-shadow:0 0 10px rgba(255,10,10,.3)}
+.rs-auth-actions{display:grid;gap:.65rem;margin-top:.5rem}
+.rs-auth-btn{width:100%;padding:.8rem 1rem;border:1px solid #8a0303;background:#8a0303;color:#fff;text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:700;cursor:pointer}
+.rs-auth-btn:hover{background:#ff0a0a}
+.rs-auth-btn.secondary{background:transparent;border-color:rgba(255,255,255,.25)}
+.rs-auth-btn.secondary:hover{background:rgba(255,255,255,.08);border-color:#fff}
+#rs-auth-status{min-height:1.25rem;color:#ff6666;font-size:.75rem;margin:.5rem 0}
+#rs-auth-user{display:inline-flex;align-items:center;gap:.5rem;margin-top:.75rem;font-size:.65rem;color:#888;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rs-auth-note{font-size:.62rem;color:#555;line-height:1.5;margin-top:1rem}
+#rs-logout-btn{display:inline-flex;align-items:center;gap:.35rem}
+
 </style>
 </head>
 <body class="font-edgy overflow-x-hidden antialiased">
+
+<!-- ================= FIREBASE AUTH GATE ================= -->
+<section id="rs-auth-gate" aria-label="Autenticación">
+  <div class="rs-auth-box">
+    <svg viewBox="0 0 100 100" class="rs-auth-logo" aria-hidden="true"><use href="#emblem"></use></svg>
+    <div class="rs-auth-title">Redemption</div>
+    <div class="rs-auth-subtitle">Studio · Acceso</div>
+    <form id="rs-auth-form" autocomplete="on">
+      <input type="email" id="rs-auth-email" placeholder="Correo electrónico" autocomplete="email" required>
+      <input type="password" id="rs-auth-password" placeholder="Contraseña" autocomplete="current-password" required>
+      <div id="rs-auth-status" role="alert" aria-live="polite"></div>
+      <div class="rs-auth-actions">
+        <button type="submit" class="rs-auth-btn" id="rs-login-btn">Ingresar al Estudio</button>
+        <button type="button" class="rs-auth-btn secondary" id="rs-register-btn">Forjar Alianza · Registrarse</button>
+      </div>
+    </form>
+    <div id="rs-auth-user" class="hidden"></div>
+    <p class="rs-auth-note">La autenticación y los pedidos usan Firebase. Configura tus credenciales de Firebase en el bloque de configuración al final del archivo.</p>
+  </div>
+</section>
+
 
 <svg width="0" height="0" style="position:absolute"><symbol id="emblem" viewBox="0 0 100 100">
 <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
@@ -101,6 +142,10 @@ body{background:#050505;color:#fff;cursor:crosshair}
   <div class="p-4 border-t border-white/10 text-center text-[10px] text-gray-600 uppercase tracking-[0.2em] font-bold">
     <a href="https://www.instagram.com/redemption._studios" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-gray-300 hover:text-bloodhover mb-3 text-xs tracking-[0.2em]" aria-label="Instagram de Redemption Studio"><i class="ph ph-instagram-logo text-2xl"></i>@redemption._studios</a>
     <br>
+
+<button id="rs-logout-btn" type="button" class="mx-auto mt-3 border border-white/10 px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 hover:text-white hover:border-blood transition-all">
+  <i class="ph ph-sign-out"></i> Cerrar sesión
+</button>
     &copy; <span id="year"></span> Redemption Studio
   </div>
 </aside>
@@ -419,47 +464,28 @@ body{background:#050505;color:#fff;cursor:crosshair}
 const IG_URL='https://www.instagram.com/redemption._studios';
 const MONEDA='MXN',ENVIO_GRATIS_DESDE=1500,COSTO_ENVIO=99;
 const CUPONES={SANGRE13:13,AQUELARRE:10};
-const CLD=p=>'https://res.cloudinary.com/cej2howv/image/upload/f_auto,q_auto,w_1200/'+p;
-const IMAGENES={hero:CLD('v1790828669/687801164_18049213646581896_2425989244710689396_n.webp'),forzaken:CLD('v1790828668/684234929_18049213628581896_1179458661040362785_n.webp'),drop:CLD('v1790828668/684150136_18049219337581896_4845453878624067729_n.webp'),aquelarre:CLD('v1790828668/653542346_18040353134581896_8707120289513746196_n.webp'),
+const IMAGENES={hero:'img/look-04.webp',forzaken:'img/look-08.webp',drop:'img/look-06.webp',aquelarre:'img/look-03.webp',
 lookbook:[
-{src:CLD('v1790828668/684234929_18049213628581896_1179458661040362785_n.webp'),alt:'Grupo Forzaken frente a una cortina metálica, en rojo'},
-{src:CLD('v1790828672/652008424_18040354262581896_1884159140969626474_n.webp'),alt:'Modelo con playera negra de corona de espinas'},
-{src:CLD('v1790828669/687801164_18049213646581896_2425989244710689396_n.webp'),alt:'Dos modelos bajo los arcos de noche, en rojo'},
-{src:CLD('v1790828668/653542346_18040353134581896_8707120289513746196_n.webp'),alt:'Espalda de playera negra con rostro en blanco y negro'},
-{src:CLD('v1790828668/684115457_18049219355581896_3337217833850453642_n.webp'),alt:'Modelo en una máquina de peluches con marco de alambre de púas',marco:false},
-{src:CLD('v1790828668/684207802_18049213673581896_2117791840625883885_n.webp'),alt:'Collage con playera blanca de tres cruces y short negro'},
-{src:CLD('v1790828667/652794813_18040353872581896_7163413855208630458_n.webp'),alt:'Camisa café con estampado Redemption en la espalda'},
-{src:CLD('v1790828668/684265436_18049213655581896_6943061061854945789_n.webp'),alt:'Collage con playera negra de manga larga y medias de red'},
-{src:CLD('v1790828668/684109304_18049213682581896_6245878915181395844_n.webp'),alt:'Dos modelos con playeras de cruces, en rojo'},
-{src:CLD('v1790828668/684150136_18049219337581896_4845453878624067729_n.webp'),alt:'Cartel Forzaken, nuevo drop de Redemption Studios'},
-{src:CLD('v1790828669/788383909_18067057751581896_7416096738117801718_n.webp'),alt:'Playera gris lavada vista de espaldas'},
-{src:CLD('v1790828605/829842661_18108620585052376_1148120753677152720_n.jpg'),alt:'Playera gris lavada con estampado de cruz en el gimnasio, en blanco y negro'},
-{src:CLD('v1790828655/829658188_18108620555052376_2455140212601745485_n.jpg'),alt:'Playera Team Giovanni con estampado de espinas, en blanco y negro'},
-{src:CLD('v1790828671/828831420_18108404582052376_3125824753602403358_n.jpg'),alt:'Modelo en el gimnasio con playera negra, en blanco y negro'},
-{src:CLD('v1790828671/813832544_18069584162581896_998574968772570116_n.webp'),alt:'Sudadera negra con cruces bordadas en maniquí'},
-{src:CLD('v1790828671/813021032_18069584222581896_7357186225265065685_n.webp'),alt:'Chamarra café con botones de nudo en maniquí'},
-{src:CLD('v1790828671/813624174_18069584273581896_4049002591765614894_n.webp'),alt:'Playera negra con estampado de anime y pantalón con letras góticas moradas'},
-{src:CLD('v1790828671/813212442_18069584333581896_4308572311013884861_n.webp'),alt:'Playera negra con estampado de anime y pantalón con nubes'},
-{src:CLD('v1790828670/809209195_18069584309581896_6237155489556665628_n.webp'),alt:'Playera roja y negra con pantalón de nubes rojas'},
-{src:CLD('v1790828670/795767263_18069584264581896_7980369522261340856_n.webp'),alt:'Playera con estampado de anime y short de nubes rojas'},
-{src:CLD('v1790828671/813624063_18069584432581896_458442996077423068_n.webp'),alt:'Pantalones negros con estampado de espinas moradas'},
-{src:CLD('v1790828671/812224919_18069584423581896_6432689003851862072_n.webp'),alt:'Pantalones negros con estampados en rojo y azul'},
-{src:CLD('v1790828670/793639980_18069584444581896_4271924548885946334_n.webp'),alt:'Pantalones negros con alas de espinas en blanco y morado'},
-{src:CLD('v1790828670/809209164_18069584453581896_3083213398511484965_n.webp'),alt:'Tres pantalones con estampados góticos y de nubes'},
-{src:CLD('v1790828671/813733914_18069584477581896_125459442246551251_n.webp'),alt:'Tres playeras con estampados de anime'},
-{src:CLD('v1790828670/809209161_18069584474581896_2441090606829211698_n.webp'),alt:'Tres playeras negras con estampados en rojo'},
-{src:CLD('v1790828670/792820480_18067580363581896_2031527473355245062_n.webp'),alt:'Playeras tie-dye en rojo y negro'},
-{src:CLD('v1790828669/792667283_18067580309581896_1657697526161248838_n.webp'),alt:'Dos playeras negras con estampados al frente y en la espalda'},
-{src:CLD('v1790828672/829310807_18108404612052376_5787535419352332575_n.jpg'),alt:'Empaque con lobo estampado de Redemption Studios'}]};
+{src:'img/look-08.webp',alt:'Grupo Forzaken frente a una cortina metálica, en rojo'},
+{src:'img/look-01.webp',alt:'Modelo con playera negra de corona de espinas'},
+{src:'img/look-04.webp',alt:'Dos modelos bajo los arcos de noche, en rojo'},
+{src:'img/look-03.webp',alt:'Espalda de playera negra con rostro en blanco y negro'},
+{src:'img/look-05.webp',alt:'Modelo en una máquina de peluches con marco de alambre de púas',marco:false},
+{src:'img/look-07.webp',alt:'Collage con playera blanca de tres cruces y short negro'},
+{src:'img/look-02.webp',alt:'Camisa café con estampado Redemption en la espalda'},
+{src:'img/look-09.webp',alt:'Collage con playera negra de manga larga y medias de red'},
+{src:'img/look-10.webp',alt:'Dos modelos con playeras de cruces, en rojo'},
+{src:'img/look-06.webp',alt:'Cartel Forzaken, nuevo drop de Redemption Studios'},
+{src:'img/look-11.webp',alt:'Playera gris lavada vista de espaldas'}]};
 const PRODUCTOS=[
-{id:'breathe-divinity',nombre:'Playera Breathe Divinity',precio:450,categoria:'playeras',fotos:[CLD('v1790828669/790024856_18067580213581896_6889060322059661393_n.webp')],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con el estampado Breathe Divinity en el pecho y las mangas. En la espalda, cruz con alas en blanco y rosa.'},
-{id:'conjunto-breathe',nombre:'Conjunto Breathe Divinity',precio:850,categoria:'conjuntos',fotos:[CLD('v1790828669/790024856_18067580213581896_6889060322059661393_n.webp')],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con estampado en rosa y blanco, más pantalón lavado con calavera y rosas en la pierna.'},
-{id:'tiedye-metal',nombre:'Playera Tie-Dye Metal',precio:480,categoria:'playeras',fotos:[CLD('v1790828669/790024862_18067580297581896_8429353944660031328_n.webp')],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Azul','Rojo','Verde','Morado']},etiqueta:'Edición limitada',descripcion:'Playera con efecto tie-dye en cuatro colores, personaje de caricatura al frente y letras metal en el cuello.'},
-{id:'wolves-flames',nombre:'Playera Wolves Flames',precio:450,categoria:'playeras',fotos:[CLD('v1790828669/790086753_18067580249581896_7193917638731636789_n.webp')],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Café','Hueso','Negro']},etiqueta:'Más vendido',descripcion:'Playera con estampado de llamas y alas en toda la espalda. Disponible en café, hueso y negro.'},
-{id:'mangas-largas',nombre:'Manga larga Jersey',precio:520,categoria:'mangas',fotos:[CLD('v1790828672/829098355_18108620633052376_9130177380830099196_n.jpg')],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Cruz de hierro','Herradura']},etiqueta:'',descripcion:'Manga larga con estampado grande al frente y detalles en las mangas. Dos diseños: cruz de hierro en bloques beige y negro, o herradura con cruz sobre negro.'},
-{id:'wolves-back',nombre:'Playera Wolves Back Print',precio:450,categoria:'playeras',fotos:[CLD('v1790828669/785200866_18067580156581896_6423449904958552565_n.webp')],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Heaven Has to Wait','Lobo y serpiente']},etiqueta:'',descripcion:'Playera negra con estampado grande en la espalda. Elige entre dos diseños.'},
-{id:'tank-lavado',nombre:'Top sin mangas lavado',precio:380,categoria:'sinmangas',fotos:[CLD('v1790828669/790059394_18067580504581896_3812045264416952145_n.webp')],tallas:['S','M','L'],variantes:{label:'Color',opciones:['Verde','Gris']},etiqueta:'',descripcion:'Top sin mangas con efecto lavado y letras góticas grandes en la espalda.'},
-{id:'luna-relampagos',nombre:'Playera Luna y Relámpagos',precio:450,categoria:'playeras',fotos:[CLD('v1790828670/792687906_18067583198581896_5802382385759399339_n.webp')],tallas:['S','M','L','XL'],etiqueta:'',descripcion:'Playera negra con un personaje bajo la luna llena, relámpagos y letras góticas en contorno.'}];
+{id:'breathe-divinity',nombre:'Playera Breathe Divinity',precio:450,categoria:'playeras',fotos:['img/prod-breathe-divinity.webp'],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con el estampado Breathe Divinity en el pecho y las mangas. En la espalda, cruz con alas en blanco y rosa.'},
+{id:'conjunto-breathe',nombre:'Conjunto Breathe Divinity',precio:850,categoria:'conjuntos',fotos:['img/prod-conjunto-breathe.webp'],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con estampado en rosa y blanco, más pantalón lavado con calavera y rosas en la pierna.'},
+{id:'tiedye-metal',nombre:'Playera Tie-Dye Metal',precio:480,categoria:'playeras',fotos:['img/prod-tiedye-metal.webp'],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Azul','Rojo','Verde','Morado']},etiqueta:'Edición limitada',descripcion:'Playera con efecto tie-dye en cuatro colores, personaje de caricatura al frente y letras metal en el cuello.'},
+{id:'wolves-flames',nombre:'Playera Wolves Flames',precio:450,categoria:'playeras',fotos:['img/prod-wolves-flames.webp'],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Café','Hueso','Negro']},etiqueta:'Más vendido',descripcion:'Playera con estampado de llamas y alas en toda la espalda. Disponible en café, hueso y negro.'},
+{id:'mangas-largas',nombre:'Manga larga Jersey',precio:520,categoria:'mangas',fotos:['img/prod-mangas-largas.webp'],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Cruz de hierro','Herradura']},etiqueta:'',descripcion:'Manga larga con estampado grande al frente y detalles en las mangas. Dos diseños: cruz de hierro en bloques beige y negro, o herradura con cruz sobre negro.'},
+{id:'wolves-back',nombre:'Playera Wolves Back Print',precio:450,categoria:'playeras',fotos:['img/prod-wolves-back.webp'],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Heaven Has to Wait','Lobo y serpiente']},etiqueta:'',descripcion:'Playera negra con estampado grande en la espalda. Elige entre dos diseños.'},
+{id:'tank-lavado',nombre:'Top sin mangas lavado',precio:380,categoria:'sinmangas',fotos:['img/prod-tank-lavado.webp'],tallas:['S','M','L'],variantes:{label:'Color',opciones:['Verde','Gris']},etiqueta:'',descripcion:'Top sin mangas con efecto lavado y letras góticas grandes en la espalda.'},
+{id:'luna-relampagos',nombre:'Playera Luna y Relámpagos',precio:450,categoria:'playeras',fotos:['img/prod-luna-relampagos.webp'],tallas:['S','M','L','XL'],etiqueta:'',descripcion:'Playera negra con un personaje bajo la luna llena, relámpagos y letras góticas en contorno.'}];
 const DESTACADOS=['breathe-divinity','tiedye-metal','wolves-flames'];
 const CATEGORIAS={playeras:'Playeras',mangas:'Mangas largas',sinmangas:'Sin mangas',conjuntos:'Conjuntos'};
 const NAV=[['inicio','ph-house','Inicio'],['coleccion','ph-skull','Nuevos Engendros'],['pedido','ph-package','Hacer pedido'],['lookbook','ph-camera','Lookbook'],['ritual','ph-hourglass','Próximo Ritual'],['aquelarre','ph-envelope-simple','El Aquelarre'],['contacto','ph-chat-teardrop','Contacto'],['retornos','ph-arrows-counter-clockwise','Retornos'],['privacidad','ph-eye-closed','Privacidad']];
@@ -671,15 +697,45 @@ let lastFolio='';
 function prepOrder(){const t=cartTotals();lastFolio='RS-'+new Date().toISOString().slice(2,10).replace(/-/g,'')+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
   $('#f-folio').value=lastFolio;$('#f-subtotal').value=money(t.subtotal);$('#f-descuento').value=coupon?`${coupon}: -${money(t.discount)}`:'';$('#f-envio').value=money(t.shipping);$('#f-total').value=money(t.total);$('#f-resumen').value=orderLines()}
 
+
+/* ---- Firebase: guardar pedidos del carrito avanzado ---- */
+window.saveRedemptionOrderToFirebase = async function(extra={}){
+  const rf=window.RedemptionFirebase;
+  if(!rf || !rf.configured || !rf.auth || !rf.db || !rf.auth.currentUser)return null;
+  const t=cartTotals(),user=rf.auth.currentUser;
+  const order={
+    userId:user.uid,userEmail:user.email,
+    items:cart.map(i=>({id:i.id,cantidad:i.cantidad,variante:i.variante||null,talla:i.talla||null})),
+    subtotal:t.subtotal,discount:t.discount,shipping:t.shipping,total:t.total,
+    coupon:coupon||null,entrega:entrega||null,date:firebase.database.ServerValue.TIMESTAMP,
+    status:"Pendiente",...extra
+  };
+  const ref=rf.db.ref('orders').push();
+  await ref.set({...order,date:firebase.database.ServerValue.TIMESTAMP});
+  return ref.key;
+};
+
 /* ---- Formularios (Netlify Forms) ---- */
 $$('form.netlify-ajax').forEach(f=>f.addEventListener('submit',async e=>{
   e.preventDefault();const isOrder=f.id==='order-form';
-  if(isOrder){if(!cart.length){toast('Tu pedido está vacío');return}prepOrder()}
+  if(isOrder){
+    const rf=window.RedemptionFirebase;
+    if(rf?.configured && !rf.auth?.currentUser){toast('Inicia sesión para completar el pedido');return}
+    if(!cart.length){toast('Tu pedido está vacío');return}
+    prepOrder()
+  }
   const b=f.querySelector('[type=submit]');b.disabled=true;
   try{
     const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
     if(!r.ok)throw 0;
-    if(isOrder){orderSent=true;$('#done-folio').textContent=lastFolio;cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'})}
+    if(isOrder){
+      let firebaseOrderId=null;
+      try{firebaseOrderId=await window.saveRedemptionOrderToFirebase({folio:lastFolio});}
+      catch(firebaseError){console.error('[Redemption Studio] No se pudo guardar el pedido en Firebase:',firebaseError);}
+      orderSent=true;$('#done-folio').textContent=lastFolio;
+      if(firebaseOrderId)toast('Pedido guardado en Firebase','bone');
+      cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'})
+    }
     else{toast(f.dataset.success,'bone');f.reset()}
   }catch{toast('No se pudo enviar. Intenta de nuevo.')}finally{b.disabled=false}
 }));
@@ -700,5 +756,69 @@ $('#year').textContent=new Date().getFullYear();
 renderProducts();renderCart();renderWishlist();
 go(location.hash.slice(1)||'inicio');
 </script>
+
+<!-- ================= FIREBASE (COMPAT) ================= -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script>
+window.RedemptionFirebase=(()=>{
+  const firebaseConfig={
+    apiKey:"AIzaSyCcgFInznsLdw9H0FK2MU3zU6PoX01jRV0",
+    authDomain:"redemption-studio.firebaseapp.com",
+    databaseURL:"https://redemption-studio-default-rtdb.firebaseio.com",
+    projectId:"redemption-studio",
+    storageBucket:"redemption-studio.firebasestorage.app",
+    messagingSenderId:"386143395560",
+    appId:"1:386143395560:web:38a4e1afbddf36ac8d735d",
+    measurementId:"G-C1BTC0SP19"
+  };
+  const configured=!!firebaseConfig.apiKey&&!firebaseConfig.apiKey.startsWith("TU_");
+  const gate=document.getElementById('rs-auth-gate'),form=document.getElementById('rs-auth-form');
+  const email=document.getElementById('rs-auth-email'),password=document.getElementById('rs-auth-password');
+  const status=document.getElementById('rs-auth-status'),registerBtn=document.getElementById('rs-register-btn');
+  const logoutBtn=document.getElementById('rs-logout-btn'),userBadge=document.getElementById('rs-auth-user');
+  const setStatus=(msg,ok=false)=>{status.textContent=msg||'';status.style.color=ok?'#4caf50':'#ff6666'};
+  const showGate=show=>gate.classList.toggle('rs-auth-hidden',!show);
+  const friendlyError=error=>{
+    const map={'auth/invalid-email':'El correo no es válido.','auth/user-not-found':'No existe una cuenta con ese correo.','auth/wrong-password':'La contraseña no es correcta.','auth/invalid-credential':'El correo o la contraseña no son correctos.','auth/email-already-in-use':'Ese correo ya está registrado.','auth/weak-password':'La contraseña debe tener al menos 6 caracteres.','auth/network-request-failed':'No se pudo conectar con Firebase.'};
+    return map[error?.code]||('Error de autenticación: '+(error?.message||'desconocido'));
+  };
+  if(!configured){
+    showGate(false);logoutBtn.classList.add('hidden');
+    console.warn('[Redemption Studio] Firebase no está configurado. Reemplaza las credenciales TU_... para activar login y pedidos.');
+    return {configured:false,auth:null,db:null};
+  }
+  try{
+    if(!firebase.apps.length)firebase.initializeApp(firebaseConfig);
+    const auth=firebase.auth(),db=firebase.database();
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();setStatus('');
+      try{await auth.signInWithEmailAndPassword(email.value.trim(),password.value)}
+      catch(error){setStatus(friendlyError(error))}
+    });
+    registerBtn.addEventListener('click',async()=>{
+      setStatus('');
+      if(!email.value.trim()||!password.value){setStatus('Escribe correo y contraseña primero.');return}
+      try{
+        const userCred=await auth.createUserWithEmailAndPassword(email.value.trim(),password.value);
+        await db.ref('users/'+userCred.user.uid).update({email:userCred.user.email,createdAt:firebase.database.ServerValue.TIMESTAMP});
+        setStatus('Cuenta creada. Accediendo…',true);
+      }catch(error){setStatus(friendlyError(error))}
+    });
+    logoutBtn.addEventListener('click',()=>auth.signOut());
+    auth.onAuthStateChanged(user=>{
+      const logged=!!user;showGate(!logged);
+      userBadge.textContent=logged?user.email:'';userBadge.classList.toggle('hidden',!logged);
+      logoutBtn.classList.toggle('hidden',!logged);
+    });
+    return {configured:true,auth,db};
+  }catch(error){
+    console.error('[Redemption Studio] Firebase initialization error:',error);
+    showGate(false);return {configured:false,auth:null,db:null};
+  }
+})();
+</script>
+
 </body>
 </html>
