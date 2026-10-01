@@ -1,0 +1,19 @@
+{
+  "name": "redemption-studios",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@netlify/database": "^2.0.1",
+    "@netlify/functions": "^6.0.2",
+    "@netlify/identity": "^2.0.0",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-beta.22"
+  }
+}

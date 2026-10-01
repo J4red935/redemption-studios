@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redemption Studio | Goth & Emo Fashion</title>
+<meta name="description" content="Redemption Studio: ropa y accesorios góticos. Haz tu pedido en línea.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{gothic:['UnifrakturMaguntia','cursive'],edgy:['Oswald','sans-serif']},colors:{blood:'#8a0303',bloodhover:'#ff0a0a',void:'#050505',abyss:'#111111',bone:'#d9d3c7'}}}}
+</script>
+<style>
+:root{--w-red:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2296%22 height=%2296%22 viewBox=%220 0 96 96%22%3E%3Cpath d=%22M0.0,8.00 L1.0,7.49 L2.0,7.01 L3.0,6.56 L4.0,6.16 L5.0,5.84 L6.0,5.60 L7.0,5.45 L8.0,5.40 L9.0,5.45 L10.0,5.60 L11.0,5.84 L12.0,6.16 L13.0,6.56 L14.0,7.01 L15.0,7.49 L16.0,8.00 L17.0,8.51 L18.0,8.99 L19.0,9.44 L20.0,9.84 L21.0,10.16 L22.0,10.40 L23.0,10.55 L24.0,10.60 L25.0,10.55 L26.0,10.40 L27.0,10.16 L28.0,9.84 L29.0,9.44 L30.0,8.99 L31.0,8.51 L32.0,8.00 L33.0,7.49 L34.0,7.01 L35.0,6.56 L36.0,6.16 L37.0,5.84 L38.0,5.60 L39.0,5.45 L40.0,5.40 L41.0,5.45 L42.0,5.60 L43.0,5.84 L44.0,6.16 L45.0,6.56 L46.0,7.01 L47.0,7.49 L48.0,8.00 L49.0,8.51 L50.0,8.99 L51.0,9.44 L52.0,9.84 L53.0,10.16 L54.0,10.40 L55.0,10.55 L56.0,10.60 L57.0,10.55 L58.0,10.40 L59.0,10.16 L60.0,9.84 L61.0,9.44 L62.0,8.99 L63.0,8.51 L64.0,8.00 L65.0,7.49 L66.0,7.01 L67.0,6.56 L68.0,6.16 L69.0,5.84 L70.0,5.60 L71.0,5.45 L72.0,5.40 L73.0,5.45 L74.0,5.60 L75.0,5.84 L76.0,6.16 L77.0,6.56 L78.0,7.01 L79.0,7.49 L80.0,8.00 L81.0,8.51 L82.0,8.99 L83.0,9.44 L84.0,9.84 L85.0,10.16 L86.0,10.40 L87.0,10.55 L88.0,10.60 L89.0,10.55 L90.0,10.40 L91.0,10.16 L92.0,9.84 L93.0,9.44 L94.0,8.99 L95.0,8.51 L96.0,8.00%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,8.00 L1.0,8.51 L2.0,8.99 L3.0,9.44 L4.0,9.84 L5.0,10.16 L6.0,10.40 L7.0,10.55 L8.0,10.60 L9.0,10.55 L10.0,10.40 L11.0,10.16 L12.0,9.84 L13.0,9.44 L14.0,8.99 L15.0,8.51 L16.0,8.00 L17.0,7.49 L18.0,7.01 L19.0,6.56 L20.0,6.16 L21.0,5.84 L22.0,5.60 L23.0,5.45 L24.0,5.40 L25.0,5.45 L26.0,5.60 L27.0,5.84 L28.0,6.16 L29.0,6.56 L30.0,7.01 L31.0,7.49 L32.0,8.00 L33.0,8.51 L34.0,8.99 L35.0,9.44 L36.0,9.84 L37.0,10.16 L38.0,10.40 L39.0,10.55 L40.0,10.60 L41.0,10.55 L42.0,10.40 L43.0,10.16 L44.0,9.84 L45.0,9.44 L46.0,8.99 L47.0,8.51 L48.0,8.00 L49.0,7.49 L50.0,7.01 L51.0,6.56 L52.0,6.16 L53.0,5.84 L54.0,5.60 L55.0,5.45 L56.0,5.40 L57.0,5.45 L58.0,5.60 L59.0,5.84 L60.0,6.16 L61.0,6.56 L62.0,7.01 L63.0,7.49 L64.0,8.00 L65.0,8.51 L66.0,8.99 L67.0,9.44 L68.0,9.84 L69.0,10.16 L70.0,10.40 L71.0,10.55 L72.0,10.60 L73.0,10.55 L74.0,10.40 L75.0,10.16 L76.0,9.84 L77.0,9.44 L78.0,8.99 L79.0,8.51 L80.0,8.00 L81.0,7.49 L82.0,7.01 L83.0,6.56 L84.0,6.16 L85.0,5.84 L86.0,5.60 L87.0,5.45 L88.0,5.40 L89.0,5.45 L90.0,5.60 L91.0,5.84 L92.0,6.16 L93.0,6.56 L94.0,7.01 L95.0,7.49 L96.0,8.00%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M-4.2,3.8 L4.2,12.2 M-4.2,12.2 L4.2,3.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M27.8,3.8 L36.2,12.2 M27.8,12.2 L36.2,3.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M59.8,3.8 L68.2,12.2 M59.8,12.2 L68.2,3.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M91.8,3.8 L100.2,12.2 M91.8,12.2 L100.2,3.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,88.00 L1.0,87.49 L2.0,87.01 L3.0,86.56 L4.0,86.16 L5.0,85.84 L6.0,85.60 L7.0,85.45 L8.0,85.40 L9.0,85.45 L10.0,85.60 L11.0,85.84 L12.0,86.16 L13.0,86.56 L14.0,87.01 L15.0,87.49 L16.0,88.00 L17.0,88.51 L18.0,88.99 L19.0,89.44 L20.0,89.84 L21.0,90.16 L22.0,90.40 L23.0,90.55 L24.0,90.60 L25.0,90.55 L26.0,90.40 L27.0,90.16 L28.0,89.84 L29.0,89.44 L30.0,88.99 L31.0,88.51 L32.0,88.00 L33.0,87.49 L34.0,87.01 L35.0,86.56 L36.0,86.16 L37.0,85.84 L38.0,85.60 L39.0,85.45 L40.0,85.40 L41.0,85.45 L42.0,85.60 L43.0,85.84 L44.0,86.16 L45.0,86.56 L46.0,87.01 L47.0,87.49 L48.0,88.00 L49.0,88.51 L50.0,88.99 L51.0,89.44 L52.0,89.84 L53.0,90.16 L54.0,90.40 L55.0,90.55 L56.0,90.60 L57.0,90.55 L58.0,90.40 L59.0,90.16 L60.0,89.84 L61.0,89.44 L62.0,88.99 L63.0,88.51 L64.0,88.00 L65.0,87.49 L66.0,87.01 L67.0,86.56 L68.0,86.16 L69.0,85.84 L70.0,85.60 L71.0,85.45 L72.0,85.40 L73.0,85.45 L74.0,85.60 L75.0,85.84 L76.0,86.16 L77.0,86.56 L78.0,87.01 L79.0,87.49 L80.0,88.00 L81.0,88.51 L82.0,88.99 L83.0,89.44 L84.0,89.84 L85.0,90.16 L86.0,90.40 L87.0,90.55 L88.0,90.60 L89.0,90.55 L90.0,90.40 L91.0,90.16 L92.0,89.84 L93.0,89.44 L94.0,88.99 L95.0,88.51 L96.0,88.00%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,88.00 L1.0,88.51 L2.0,88.99 L3.0,89.44 L4.0,89.84 L5.0,90.16 L6.0,90.40 L7.0,90.55 L8.0,90.60 L9.0,90.55 L10.0,90.40 L11.0,90.16 L12.0,89.84 L13.0,89.44 L14.0,88.99 L15.0,88.51 L16.0,88.00 L17.0,87.49 L18.0,87.01 L19.0,86.56 L20.0,86.16 L21.0,85.84 L22.0,85.60 L23.0,85.45 L24.0,85.40 L25.0,85.45 L26.0,85.60 L27.0,85.84 L28.0,86.16 L29.0,86.56 L30.0,87.01 L31.0,87.49 L32.0,88.00 L33.0,88.51 L34.0,88.99 L35.0,89.44 L36.0,89.84 L37.0,90.16 L38.0,90.40 L39.0,90.55 L40.0,90.60 L41.0,90.55 L42.0,90.40 L43.0,90.16 L44.0,89.84 L45.0,89.44 L46.0,88.99 L47.0,88.51 L48.0,88.00 L49.0,87.49 L50.0,87.01 L51.0,86.56 L52.0,86.16 L53.0,85.84 L54.0,85.60 L55.0,85.45 L56.0,85.40 L57.0,85.45 L58.0,85.60 L59.0,85.84 L60.0,86.16 L61.0,86.56 L62.0,87.01 L63.0,87.49 L64.0,88.00 L65.0,88.51 L66.0,88.99 L67.0,89.44 L68.0,89.84 L69.0,90.16 L70.0,90.40 L71.0,90.55 L72.0,90.60 L73.0,90.55 L74.0,90.40 L75.0,90.16 L76.0,89.84 L77.0,89.44 L78.0,88.99 L79.0,88.51 L80.0,88.00 L81.0,87.49 L82.0,87.01 L83.0,86.56 L84.0,86.16 L85.0,85.84 L86.0,85.60 L87.0,85.45 L88.0,85.40 L89.0,85.45 L90.0,85.60 L91.0,85.84 L92.0,86.16 L93.0,86.56 L94.0,87.01 L95.0,87.49 L96.0,88.00%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M-4.2,83.8 L4.2,92.2 M-4.2,92.2 L4.2,83.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M27.8,83.8 L36.2,92.2 M27.8,92.2 L36.2,83.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M59.8,83.8 L68.2,92.2 M59.8,92.2 L68.2,83.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M91.8,83.8 L100.2,92.2 M91.8,92.2 L100.2,83.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M8.00,0.0 L7.49,1.0 L7.01,2.0 L6.56,3.0 L6.16,4.0 L5.84,5.0 L5.60,6.0 L5.45,7.0 L5.40,8.0 L5.45,9.0 L5.60,10.0 L5.84,11.0 L6.16,12.0 L6.56,13.0 L7.01,14.0 L7.49,15.0 L8.00,16.0 L8.51,17.0 L8.99,18.0 L9.44,19.0 L9.84,20.0 L10.16,21.0 L10.40,22.0 L10.55,23.0 L10.60,24.0 L10.55,25.0 L10.40,26.0 L10.16,27.0 L9.84,28.0 L9.44,29.0 L8.99,30.0 L8.51,31.0 L8.00,32.0 L7.49,33.0 L7.01,34.0 L6.56,35.0 L6.16,36.0 L5.84,37.0 L5.60,38.0 L5.45,39.0 L5.40,40.0 L5.45,41.0 L5.60,42.0 L5.84,43.0 L6.16,44.0 L6.56,45.0 L7.01,46.0 L7.49,47.0 L8.00,48.0 L8.51,49.0 L8.99,50.0 L9.44,51.0 L9.84,52.0 L10.16,53.0 L10.40,54.0 L10.55,55.0 L10.60,56.0 L10.55,57.0 L10.40,58.0 L10.16,59.0 L9.84,60.0 L9.44,61.0 L8.99,62.0 L8.51,63.0 L8.00,64.0 L7.49,65.0 L7.01,66.0 L6.56,67.0 L6.16,68.0 L5.84,69.0 L5.60,70.0 L5.45,71.0 L5.40,72.0 L5.45,73.0 L5.60,74.0 L5.84,75.0 L6.16,76.0 L6.56,77.0 L7.01,78.0 L7.49,79.0 L8.00,80.0 L8.51,81.0 L8.99,82.0 L9.44,83.0 L9.84,84.0 L10.16,85.0 L10.40,86.0 L10.55,87.0 L10.60,88.0 L10.55,89.0 L10.40,90.0 L10.16,91.0 L9.84,92.0 L9.44,93.0 L8.99,94.0 L8.51,95.0 L8.00,96.0%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M8.00,0.0 L8.51,1.0 L8.99,2.0 L9.44,3.0 L9.84,4.0 L10.16,5.0 L10.40,6.0 L10.55,7.0 L10.60,8.0 L10.55,9.0 L10.40,10.0 L10.16,11.0 L9.84,12.0 L9.44,13.0 L8.99,14.0 L8.51,15.0 L8.00,16.0 L7.49,17.0 L7.01,18.0 L6.56,19.0 L6.16,20.0 L5.84,21.0 L5.60,22.0 L5.45,23.0 L5.40,24.0 L5.45,25.0 L5.60,26.0 L5.84,27.0 L6.16,28.0 L6.56,29.0 L7.01,30.0 L7.49,31.0 L8.00,32.0 L8.51,33.0 L8.99,34.0 L9.44,35.0 L9.84,36.0 L10.16,37.0 L10.40,38.0 L10.55,39.0 L10.60,40.0 L10.55,41.0 L10.40,42.0 L10.16,43.0 L9.84,44.0 L9.44,45.0 L8.99,46.0 L8.51,47.0 L8.00,48.0 L7.49,49.0 L7.01,50.0 L6.56,51.0 L6.16,52.0 L5.84,53.0 L5.60,54.0 L5.45,55.0 L5.40,56.0 L5.45,57.0 L5.60,58.0 L5.84,59.0 L6.16,60.0 L6.56,61.0 L7.01,62.0 L7.49,63.0 L8.00,64.0 L8.51,65.0 L8.99,66.0 L9.44,67.0 L9.84,68.0 L10.16,69.0 L10.40,70.0 L10.55,71.0 L10.60,72.0 L10.55,73.0 L10.40,74.0 L10.16,75.0 L9.84,76.0 L9.44,77.0 L8.99,78.0 L8.51,79.0 L8.00,80.0 L7.49,81.0 L7.01,82.0 L6.56,83.0 L6.16,84.0 L5.84,85.0 L5.60,86.0 L5.45,87.0 L5.40,88.0 L5.45,89.0 L5.60,90.0 L5.84,91.0 L6.16,92.0 L6.56,93.0 L7.01,94.0 L7.49,95.0 L8.00,96.0%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,-4.2 L12.2,4.2 M3.8,4.2 L12.2,-4.2%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,27.8 L12.2,36.2 M3.8,36.2 L12.2,27.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,59.8 L12.2,68.2 M3.8,68.2 L12.2,59.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,91.8 L12.2,100.2 M3.8,100.2 L12.2,91.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M88.00,0.0 L87.49,1.0 L87.01,2.0 L86.56,3.0 L86.16,4.0 L85.84,5.0 L85.60,6.0 L85.45,7.0 L85.40,8.0 L85.45,9.0 L85.60,10.0 L85.84,11.0 L86.16,12.0 L86.56,13.0 L87.01,14.0 L87.49,15.0 L88.00,16.0 L88.51,17.0 L88.99,18.0 L89.44,19.0 L89.84,20.0 L90.16,21.0 L90.40,22.0 L90.55,23.0 L90.60,24.0 L90.55,25.0 L90.40,26.0 L90.16,27.0 L89.84,28.0 L89.44,29.0 L88.99,30.0 L88.51,31.0 L88.00,32.0 L87.49,33.0 L87.01,34.0 L86.56,35.0 L86.16,36.0 L85.84,37.0 L85.60,38.0 L85.45,39.0 L85.40,40.0 L85.45,41.0 L85.60,42.0 L85.84,43.0 L86.16,44.0 L86.56,45.0 L87.01,46.0 L87.49,47.0 L88.00,48.0 L88.51,49.0 L88.99,50.0 L89.44,51.0 L89.84,52.0 L90.16,53.0 L90.40,54.0 L90.55,55.0 L90.60,56.0 L90.55,57.0 L90.40,58.0 L90.16,59.0 L89.84,60.0 L89.44,61.0 L88.99,62.0 L88.51,63.0 L88.00,64.0 L87.49,65.0 L87.01,66.0 L86.56,67.0 L86.16,68.0 L85.84,69.0 L85.60,70.0 L85.45,71.0 L85.40,72.0 L85.45,73.0 L85.60,74.0 L85.84,75.0 L86.16,76.0 L86.56,77.0 L87.01,78.0 L87.49,79.0 L88.00,80.0 L88.51,81.0 L88.99,82.0 L89.44,83.0 L89.84,84.0 L90.16,85.0 L90.40,86.0 L90.55,87.0 L90.60,88.0 L90.55,89.0 L90.40,90.0 L90.16,91.0 L89.84,92.0 L89.44,93.0 L88.99,94.0 L88.51,95.0 L88.00,96.0%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M88.00,0.0 L88.51,1.0 L88.99,2.0 L89.44,3.0 L89.84,4.0 L90.16,5.0 L90.40,6.0 L90.55,7.0 L90.60,8.0 L90.55,9.0 L90.40,10.0 L90.16,11.0 L89.84,12.0 L89.44,13.0 L88.99,14.0 L88.51,15.0 L88.00,16.0 L87.49,17.0 L87.01,18.0 L86.56,19.0 L86.16,20.0 L85.84,21.0 L85.60,22.0 L85.45,23.0 L85.40,24.0 L85.45,25.0 L85.60,26.0 L85.84,27.0 L86.16,28.0 L86.56,29.0 L87.01,30.0 L87.49,31.0 L88.00,32.0 L88.51,33.0 L88.99,34.0 L89.44,35.0 L89.84,36.0 L90.16,37.0 L90.40,38.0 L90.55,39.0 L90.60,40.0 L90.55,41.0 L90.40,42.0 L90.16,43.0 L89.84,44.0 L89.44,45.0 L88.99,46.0 L88.51,47.0 L88.00,48.0 L87.49,49.0 L87.01,50.0 L86.56,51.0 L86.16,52.0 L85.84,53.0 L85.60,54.0 L85.45,55.0 L85.40,56.0 L85.45,57.0 L85.60,58.0 L85.84,59.0 L86.16,60.0 L86.56,61.0 L87.01,62.0 L87.49,63.0 L88.00,64.0 L88.51,65.0 L88.99,66.0 L89.44,67.0 L89.84,68.0 L90.16,69.0 L90.40,70.0 L90.55,71.0 L90.60,72.0 L90.55,73.0 L90.40,74.0 L90.16,75.0 L89.84,76.0 L89.44,77.0 L88.99,78.0 L88.51,79.0 L88.00,80.0 L87.49,81.0 L87.01,82.0 L86.56,83.0 L86.16,84.0 L85.84,85.0 L85.60,86.0 L85.45,87.0 L85.40,88.0 L85.45,89.0 L85.60,90.0 L85.84,91.0 L86.16,92.0 L86.56,93.0 L87.01,94.0 L87.49,95.0 L88.00,96.0%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,-4.2 L92.2,4.2 M83.8,4.2 L92.2,-4.2%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,27.8 L92.2,36.2 M83.8,36.2 L92.2,27.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,59.8 L92.2,68.2 M83.8,68.2 L92.2,59.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,91.8 L92.2,100.2 M83.8,100.2 L92.2,91.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3C/svg%3E");--w-steel:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2296%22 height=%2296%22 viewBox=%220 0 96 96%22%3E%3Cpath d=%22M0.0,8.00 L1.0,7.49 L2.0,7.01 L3.0,6.56 L4.0,6.16 L5.0,5.84 L6.0,5.60 L7.0,5.45 L8.0,5.40 L9.0,5.45 L10.0,5.60 L11.0,5.84 L12.0,6.16 L13.0,6.56 L14.0,7.01 L15.0,7.49 L16.0,8.00 L17.0,8.51 L18.0,8.99 L19.0,9.44 L20.0,9.84 L21.0,10.16 L22.0,10.40 L23.0,10.55 L24.0,10.60 L25.0,10.55 L26.0,10.40 L27.0,10.16 L28.0,9.84 L29.0,9.44 L30.0,8.99 L31.0,8.51 L32.0,8.00 L33.0,7.49 L34.0,7.01 L35.0,6.56 L36.0,6.16 L37.0,5.84 L38.0,5.60 L39.0,5.45 L40.0,5.40 L41.0,5.45 L42.0,5.60 L43.0,5.84 L44.0,6.16 L45.0,6.56 L46.0,7.01 L47.0,7.49 L48.0,8.00 L49.0,8.51 L50.0,8.99 L51.0,9.44 L52.0,9.84 L53.0,10.16 L54.0,10.40 L55.0,10.55 L56.0,10.60 L57.0,10.55 L58.0,10.40 L59.0,10.16 L60.0,9.84 L61.0,9.44 L62.0,8.99 L63.0,8.51 L64.0,8.00 L65.0,7.49 L66.0,7.01 L67.0,6.56 L68.0,6.16 L69.0,5.84 L70.0,5.60 L71.0,5.45 L72.0,5.40 L73.0,5.45 L74.0,5.60 L75.0,5.84 L76.0,6.16 L77.0,6.56 L78.0,7.01 L79.0,7.49 L80.0,8.00 L81.0,8.51 L82.0,8.99 L83.0,9.44 L84.0,9.84 L85.0,10.16 L86.0,10.40 L87.0,10.55 L88.0,10.60 L89.0,10.55 L90.0,10.40 L91.0,10.16 L92.0,9.84 L93.0,9.44 L94.0,8.99 L95.0,8.51 L96.0,8.00%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,8.00 L1.0,8.51 L2.0,8.99 L3.0,9.44 L4.0,9.84 L5.0,10.16 L6.0,10.40 L7.0,10.55 L8.0,10.60 L9.0,10.55 L10.0,10.40 L11.0,10.16 L12.0,9.84 L13.0,9.44 L14.0,8.99 L15.0,8.51 L16.0,8.00 L17.0,7.49 L18.0,7.01 L19.0,6.56 L20.0,6.16 L21.0,5.84 L22.0,5.60 L23.0,5.45 L24.0,5.40 L25.0,5.45 L26.0,5.60 L27.0,5.84 L28.0,6.16 L29.0,6.56 L30.0,7.01 L31.0,7.49 L32.0,8.00 L33.0,8.51 L34.0,8.99 L35.0,9.44 L36.0,9.84 L37.0,10.16 L38.0,10.40 L39.0,10.55 L40.0,10.60 L41.0,10.55 L42.0,10.40 L43.0,10.16 L44.0,9.84 L45.0,9.44 L46.0,8.99 L47.0,8.51 L48.0,8.00 L49.0,7.49 L50.0,7.01 L51.0,6.56 L52.0,6.16 L53.0,5.84 L54.0,5.60 L55.0,5.45 L56.0,5.40 L57.0,5.45 L58.0,5.60 L59.0,5.84 L60.0,6.16 L61.0,6.56 L62.0,7.01 L63.0,7.49 L64.0,8.00 L65.0,8.51 L66.0,8.99 L67.0,9.44 L68.0,9.84 L69.0,10.16 L70.0,10.40 L71.0,10.55 L72.0,10.60 L73.0,10.55 L74.0,10.40 L75.0,10.16 L76.0,9.84 L77.0,9.44 L78.0,8.99 L79.0,8.51 L80.0,8.00 L81.0,7.49 L82.0,7.01 L83.0,6.56 L84.0,6.16 L85.0,5.84 L86.0,5.60 L87.0,5.45 L88.0,5.40 L89.0,5.45 L90.0,5.60 L91.0,5.84 L92.0,6.16 L93.0,6.56 L94.0,7.01 L95.0,7.49 L96.0,8.00%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M-4.2,3.8 L4.2,12.2 M-4.2,12.2 L4.2,3.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M27.8,3.8 L36.2,12.2 M27.8,12.2 L36.2,3.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M59.8,3.8 L68.2,12.2 M59.8,12.2 L68.2,3.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M91.8,3.8 L100.2,12.2 M91.8,12.2 L100.2,3.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,88.00 L1.0,87.49 L2.0,87.01 L3.0,86.56 L4.0,86.16 L5.0,85.84 L6.0,85.60 L7.0,85.45 L8.0,85.40 L9.0,85.45 L10.0,85.60 L11.0,85.84 L12.0,86.16 L13.0,86.56 L14.0,87.01 L15.0,87.49 L16.0,88.00 L17.0,88.51 L18.0,88.99 L19.0,89.44 L20.0,89.84 L21.0,90.16 L22.0,90.40 L23.0,90.55 L24.0,90.60 L25.0,90.55 L26.0,90.40 L27.0,90.16 L28.0,89.84 L29.0,89.44 L30.0,88.99 L31.0,88.51 L32.0,88.00 L33.0,87.49 L34.0,87.01 L35.0,86.56 L36.0,86.16 L37.0,85.84 L38.0,85.60 L39.0,85.45 L40.0,85.40 L41.0,85.45 L42.0,85.60 L43.0,85.84 L44.0,86.16 L45.0,86.56 L46.0,87.01 L47.0,87.49 L48.0,88.00 L49.0,88.51 L50.0,88.99 L51.0,89.44 L52.0,89.84 L53.0,90.16 L54.0,90.40 L55.0,90.55 L56.0,90.60 L57.0,90.55 L58.0,90.40 L59.0,90.16 L60.0,89.84 L61.0,89.44 L62.0,88.99 L63.0,88.51 L64.0,88.00 L65.0,87.49 L66.0,87.01 L67.0,86.56 L68.0,86.16 L69.0,85.84 L70.0,85.60 L71.0,85.45 L72.0,85.40 L73.0,85.45 L74.0,85.60 L75.0,85.84 L76.0,86.16 L77.0,86.56 L78.0,87.01 L79.0,87.49 L80.0,88.00 L81.0,88.51 L82.0,88.99 L83.0,89.44 L84.0,89.84 L85.0,90.16 L86.0,90.40 L87.0,90.55 L88.0,90.60 L89.0,90.55 L90.0,90.40 L91.0,90.16 L92.0,89.84 L93.0,89.44 L94.0,88.99 L95.0,88.51 L96.0,88.00%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,88.00 L1.0,88.51 L2.0,88.99 L3.0,89.44 L4.0,89.84 L5.0,90.16 L6.0,90.40 L7.0,90.55 L8.0,90.60 L9.0,90.55 L10.0,90.40 L11.0,90.16 L12.0,89.84 L13.0,89.44 L14.0,88.99 L15.0,88.51 L16.0,88.00 L17.0,87.49 L18.0,87.01 L19.0,86.56 L20.0,86.16 L21.0,85.84 L22.0,85.60 L23.0,85.45 L24.0,85.40 L25.0,85.45 L26.0,85.60 L27.0,85.84 L28.0,86.16 L29.0,86.56 L30.0,87.01 L31.0,87.49 L32.0,88.00 L33.0,88.51 L34.0,88.99 L35.0,89.44 L36.0,89.84 L37.0,90.16 L38.0,90.40 L39.0,90.55 L40.0,90.60 L41.0,90.55 L42.0,90.40 L43.0,90.16 L44.0,89.84 L45.0,89.44 L46.0,88.99 L47.0,88.51 L48.0,88.00 L49.0,87.49 L50.0,87.01 L51.0,86.56 L52.0,86.16 L53.0,85.84 L54.0,85.60 L55.0,85.45 L56.0,85.40 L57.0,85.45 L58.0,85.60 L59.0,85.84 L60.0,86.16 L61.0,86.56 L62.0,87.01 L63.0,87.49 L64.0,88.00 L65.0,88.51 L66.0,88.99 L67.0,89.44 L68.0,89.84 L69.0,90.16 L70.0,90.40 L71.0,90.55 L72.0,90.60 L73.0,90.55 L74.0,90.40 L75.0,90.16 L76.0,89.84 L77.0,89.44 L78.0,88.99 L79.0,88.51 L80.0,88.00 L81.0,87.49 L82.0,87.01 L83.0,86.56 L84.0,86.16 L85.0,85.84 L86.0,85.60 L87.0,85.45 L88.0,85.40 L89.0,85.45 L90.0,85.60 L91.0,85.84 L92.0,86.16 L93.0,86.56 L94.0,87.01 L95.0,87.49 L96.0,88.00%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M-4.2,83.8 L4.2,92.2 M-4.2,92.2 L4.2,83.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M27.8,83.8 L36.2,92.2 M27.8,92.2 L36.2,83.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M59.8,83.8 L68.2,92.2 M59.8,92.2 L68.2,83.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M91.8,83.8 L100.2,92.2 M91.8,92.2 L100.2,83.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M8.00,0.0 L7.49,1.0 L7.01,2.0 L6.56,3.0 L6.16,4.0 L5.84,5.0 L5.60,6.0 L5.45,7.0 L5.40,8.0 L5.45,9.0 L5.60,10.0 L5.84,11.0 L6.16,12.0 L6.56,13.0 L7.01,14.0 L7.49,15.0 L8.00,16.0 L8.51,17.0 L8.99,18.0 L9.44,19.0 L9.84,20.0 L10.16,21.0 L10.40,22.0 L10.55,23.0 L10.60,24.0 L10.55,25.0 L10.40,26.0 L10.16,27.0 L9.84,28.0 L9.44,29.0 L8.99,30.0 L8.51,31.0 L8.00,32.0 L7.49,33.0 L7.01,34.0 L6.56,35.0 L6.16,36.0 L5.84,37.0 L5.60,38.0 L5.45,39.0 L5.40,40.0 L5.45,41.0 L5.60,42.0 L5.84,43.0 L6.16,44.0 L6.56,45.0 L7.01,46.0 L7.49,47.0 L8.00,48.0 L8.51,49.0 L8.99,50.0 L9.44,51.0 L9.84,52.0 L10.16,53.0 L10.40,54.0 L10.55,55.0 L10.60,56.0 L10.55,57.0 L10.40,58.0 L10.16,59.0 L9.84,60.0 L9.44,61.0 L8.99,62.0 L8.51,63.0 L8.00,64.0 L7.49,65.0 L7.01,66.0 L6.56,67.0 L6.16,68.0 L5.84,69.0 L5.60,70.0 L5.45,71.0 L5.40,72.0 L5.45,73.0 L5.60,74.0 L5.84,75.0 L6.16,76.0 L6.56,77.0 L7.01,78.0 L7.49,79.0 L8.00,80.0 L8.51,81.0 L8.99,82.0 L9.44,83.0 L9.84,84.0 L10.16,85.0 L10.40,86.0 L10.55,87.0 L10.60,88.0 L10.55,89.0 L10.40,90.0 L10.16,91.0 L9.84,92.0 L9.44,93.0 L8.99,94.0 L8.51,95.0 L8.00,96.0%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M8.00,0.0 L8.51,1.0 L8.99,2.0 L9.44,3.0 L9.84,4.0 L10.16,5.0 L10.40,6.0 L10.55,7.0 L10.60,8.0 L10.55,9.0 L10.40,10.0 L10.16,11.0 L9.84,12.0 L9.44,13.0 L8.99,14.0 L8.51,15.0 L8.00,16.0 L7.49,17.0 L7.01,18.0 L6.56,19.0 L6.16,20.0 L5.84,21.0 L5.60,22.0 L5.45,23.0 L5.40,24.0 L5.45,25.0 L5.60,26.0 L5.84,27.0 L6.16,28.0 L6.56,29.0 L7.01,30.0 L7.49,31.0 L8.00,32.0 L8.51,33.0 L8.99,34.0 L9.44,35.0 L9.84,36.0 L10.16,37.0 L10.40,38.0 L10.55,39.0 L10.60,40.0 L10.55,41.0 L10.40,42.0 L10.16,43.0 L9.84,44.0 L9.44,45.0 L8.99,46.0 L8.51,47.0 L8.00,48.0 L7.49,49.0 L7.01,50.0 L6.56,51.0 L6.16,52.0 L5.84,53.0 L5.60,54.0 L5.45,55.0 L5.40,56.0 L5.45,57.0 L5.60,58.0 L5.84,59.0 L6.16,60.0 L6.56,61.0 L7.01,62.0 L7.49,63.0 L8.00,64.0 L8.51,65.0 L8.99,66.0 L9.44,67.0 L9.84,68.0 L10.16,69.0 L10.40,70.0 L10.55,71.0 L10.60,72.0 L10.55,73.0 L10.40,74.0 L10.16,75.0 L9.84,76.0 L9.44,77.0 L8.99,78.0 L8.51,79.0 L8.00,80.0 L7.49,81.0 L7.01,82.0 L6.56,83.0 L6.16,84.0 L5.84,85.0 L5.60,86.0 L5.45,87.0 L5.40,88.0 L5.45,89.0 L5.60,90.0 L5.84,91.0 L6.16,92.0 L6.56,93.0 L7.01,94.0 L7.49,95.0 L8.00,96.0%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,-4.2 L12.2,4.2 M3.8,4.2 L12.2,-4.2%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,27.8 L12.2,36.2 M3.8,36.2 L12.2,27.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,59.8 L12.2,68.2 M3.8,68.2 L12.2,59.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M3.8,91.8 L12.2,100.2 M3.8,100.2 L12.2,91.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M88.00,0.0 L87.49,1.0 L87.01,2.0 L86.56,3.0 L86.16,4.0 L85.84,5.0 L85.60,6.0 L85.45,7.0 L85.40,8.0 L85.45,9.0 L85.60,10.0 L85.84,11.0 L86.16,12.0 L86.56,13.0 L87.01,14.0 L87.49,15.0 L88.00,16.0 L88.51,17.0 L88.99,18.0 L89.44,19.0 L89.84,20.0 L90.16,21.0 L90.40,22.0 L90.55,23.0 L90.60,24.0 L90.55,25.0 L90.40,26.0 L90.16,27.0 L89.84,28.0 L89.44,29.0 L88.99,30.0 L88.51,31.0 L88.00,32.0 L87.49,33.0 L87.01,34.0 L86.56,35.0 L86.16,36.0 L85.84,37.0 L85.60,38.0 L85.45,39.0 L85.40,40.0 L85.45,41.0 L85.60,42.0 L85.84,43.0 L86.16,44.0 L86.56,45.0 L87.01,46.0 L87.49,47.0 L88.00,48.0 L88.51,49.0 L88.99,50.0 L89.44,51.0 L89.84,52.0 L90.16,53.0 L90.40,54.0 L90.55,55.0 L90.60,56.0 L90.55,57.0 L90.40,58.0 L90.16,59.0 L89.84,60.0 L89.44,61.0 L88.99,62.0 L88.51,63.0 L88.00,64.0 L87.49,65.0 L87.01,66.0 L86.56,67.0 L86.16,68.0 L85.84,69.0 L85.60,70.0 L85.45,71.0 L85.40,72.0 L85.45,73.0 L85.60,74.0 L85.84,75.0 L86.16,76.0 L86.56,77.0 L87.01,78.0 L87.49,79.0 L88.00,80.0 L88.51,81.0 L88.99,82.0 L89.44,83.0 L89.84,84.0 L90.16,85.0 L90.40,86.0 L90.55,87.0 L90.60,88.0 L90.55,89.0 L90.40,90.0 L90.16,91.0 L89.84,92.0 L89.44,93.0 L88.99,94.0 L88.51,95.0 L88.00,96.0%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M88.00,0.0 L88.51,1.0 L88.99,2.0 L89.44,3.0 L89.84,4.0 L90.16,5.0 L90.40,6.0 L90.55,7.0 L90.60,8.0 L90.55,9.0 L90.40,10.0 L90.16,11.0 L89.84,12.0 L89.44,13.0 L88.99,14.0 L88.51,15.0 L88.00,16.0 L87.49,17.0 L87.01,18.0 L86.56,19.0 L86.16,20.0 L85.84,21.0 L85.60,22.0 L85.45,23.0 L85.40,24.0 L85.45,25.0 L85.60,26.0 L85.84,27.0 L86.16,28.0 L86.56,29.0 L87.01,30.0 L87.49,31.0 L88.00,32.0 L88.51,33.0 L88.99,34.0 L89.44,35.0 L89.84,36.0 L90.16,37.0 L90.40,38.0 L90.55,39.0 L90.60,40.0 L90.55,41.0 L90.40,42.0 L90.16,43.0 L89.84,44.0 L89.44,45.0 L88.99,46.0 L88.51,47.0 L88.00,48.0 L87.49,49.0 L87.01,50.0 L86.56,51.0 L86.16,52.0 L85.84,53.0 L85.60,54.0 L85.45,55.0 L85.40,56.0 L85.45,57.0 L85.60,58.0 L85.84,59.0 L86.16,60.0 L86.56,61.0 L87.01,62.0 L87.49,63.0 L88.00,64.0 L88.51,65.0 L88.99,66.0 L89.44,67.0 L89.84,68.0 L90.16,69.0 L90.40,70.0 L90.55,71.0 L90.60,72.0 L90.55,73.0 L90.40,74.0 L90.16,75.0 L89.84,76.0 L89.44,77.0 L88.99,78.0 L88.51,79.0 L88.00,80.0 L87.49,81.0 L87.01,82.0 L86.56,83.0 L86.16,84.0 L85.84,85.0 L85.60,86.0 L85.45,87.0 L85.40,88.0 L85.45,89.0 L85.60,90.0 L85.84,91.0 L86.16,92.0 L86.56,93.0 L87.01,94.0 L87.49,95.0 L88.00,96.0%22 stroke=%22%238b8f94%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,-4.2 L92.2,4.2 M83.8,4.2 L92.2,-4.2%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,27.8 L92.2,36.2 M83.8,36.2 L92.2,27.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,59.8 L92.2,68.2 M83.8,68.2 L92.2,59.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M83.8,91.8 L92.2,100.2 M83.8,100.2 L92.2,91.8%22 stroke=%22%23e8e4dc%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3C/svg%3E");--w-rule:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2216%22 viewBox=%220 0 64 16%22%3E%3Cpath d=%22M0.0,8.00 L1.0,7.49 L2.0,7.01 L3.0,6.56 L4.0,6.16 L5.0,5.84 L6.0,5.60 L7.0,5.45 L8.0,5.40 L9.0,5.45 L10.0,5.60 L11.0,5.84 L12.0,6.16 L13.0,6.56 L14.0,7.01 L15.0,7.49 L16.0,8.00 L17.0,8.51 L18.0,8.99 L19.0,9.44 L20.0,9.84 L21.0,10.16 L22.0,10.40 L23.0,10.55 L24.0,10.60 L25.0,10.55 L26.0,10.40 L27.0,10.16 L28.0,9.84 L29.0,9.44 L30.0,8.99 L31.0,8.51 L32.0,8.00 L33.0,7.49 L34.0,7.01 L35.0,6.56 L36.0,6.16 L37.0,5.84 L38.0,5.60 L39.0,5.45 L40.0,5.40 L41.0,5.45 L42.0,5.60 L43.0,5.84 L44.0,6.16 L45.0,6.56 L46.0,7.01 L47.0,7.49 L48.0,8.00 L49.0,8.51 L50.0,8.99 L51.0,9.44 L52.0,9.84 L53.0,10.16 L54.0,10.40 L55.0,10.55 L56.0,10.60 L57.0,10.55 L58.0,10.40 L59.0,10.16 L60.0,9.84 L61.0,9.44 L62.0,8.99 L63.0,8.51 L64.0,8.00%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M0.0,8.00 L1.0,8.51 L2.0,8.99 L3.0,9.44 L4.0,9.84 L5.0,10.16 L6.0,10.40 L7.0,10.55 L8.0,10.60 L9.0,10.55 L10.0,10.40 L11.0,10.16 L12.0,9.84 L13.0,9.44 L14.0,8.99 L15.0,8.51 L16.0,8.00 L17.0,7.49 L18.0,7.01 L19.0,6.56 L20.0,6.16 L21.0,5.84 L22.0,5.60 L23.0,5.45 L24.0,5.40 L25.0,5.45 L26.0,5.60 L27.0,5.84 L28.0,6.16 L29.0,6.56 L30.0,7.01 L31.0,7.49 L32.0,8.00 L33.0,8.51 L34.0,8.99 L35.0,9.44 L36.0,9.84 L37.0,10.16 L38.0,10.40 L39.0,10.55 L40.0,10.60 L41.0,10.55 L42.0,10.40 L43.0,10.16 L44.0,9.84 L45.0,9.44 L46.0,8.99 L47.0,8.51 L48.0,8.00 L49.0,7.49 L50.0,7.01 L51.0,6.56 L52.0,6.16 L53.0,5.84 L54.0,5.60 L55.0,5.45 L56.0,5.40 L57.0,5.45 L58.0,5.60 L59.0,5.84 L60.0,6.16 L61.0,6.56 L62.0,7.01 L63.0,7.49 L64.0,8.00%22 stroke=%22%237d0a0a%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Cpath d=%22M11.8,3.8 L20.2,12.2 M11.8,12.2 L20.2,3.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M43.8,3.8 L52.2,12.2 M43.8,12.2 L52.2,3.8%22 stroke=%22%23ff2b2b%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3C/svg%3E")}
+body{background:#050505;color:#fff;cursor:crosshair}
+::selection{background:#8a0303}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:#8a0303}
+@keyframes flash{0%,91%,93%,95%,100%{opacity:0}92%{opacity:.8;background:#fff}94%{opacity:.5;background:rgba(255,40,40,.6)}}
+.lightning{position:absolute;inset:0;pointer-events:none;animation:flash 8s infinite;mix-blend-mode:overlay;z-index:5}
+@keyframes flick{0%,19.9%,22%,62.9%,64%,64.9%,70%,100%{opacity:1;text-shadow:-2px 0 10px rgba(255,0,0,.85),2px 0 12px rgba(255,60,60,.5)}20%,21.9%,63%,63.9%,65%,69.9%{opacity:.4;text-shadow:none}}
+.flicker-text{animation:flick 4s linear infinite}
+.wire,.wire-steel{border:16px solid transparent;border-image:var(--w-red) 16 round;box-shadow:0 0 22px rgba(190,20,30,.28);transition:box-shadow .3s}
+.wire-steel{border-image-source:var(--w-steel);box-shadow:0 0 22px rgba(217,211,199,.1)}
+.wire:hover{box-shadow:0 0 36px rgba(255,20,30,.5)}
+.wire-steel:hover{box-shadow:0 0 34px rgba(217,211,199,.25)}
+.wire.sm,.wire-steel.sm{border-width:9px}
+@media(max-width:640px){.wire,.wire-steel{border-width:11px}.wire.sm,.wire-steel.sm{border-width:8px}}
+.wire-rule{height:16px;background:var(--w-rule) repeat-x center;opacity:.9}
+.edge{border:1px solid #8a0303;box-shadow:0 0 12px rgba(138,3,3,.8),inset 0 0 10px rgba(138,3,3,.6);transition:all .3s}
+.edge:hover{border-color:#ff0a0a;box-shadow:0 0 22px #ff0a0a,inset 0 0 18px rgba(255,10,10,.5)}
+.edge-bone{border:1px solid rgba(217,211,199,.7);box-shadow:0 0 12px rgba(217,211,199,.25);transition:all .3s}
+.edge-bone:hover{border-color:#fff;box-shadow:0 0 22px rgba(217,211,199,.5)}
+.goth-img{transition:transform .6s}
+.group:hover .goth-img{transform:scale(1.04)}
+.ph-wrap{position:relative;overflow:hidden;background:#0a0a0a}
+.ph-wrap .bg{position:absolute;inset:-10%;width:120%;height:120%;object-fit:cover;filter:blur(22px) brightness(.4) saturate(1.2)}
+.ph-wrap .fg{position:relative;width:100%;height:100%;object-fit:contain}
+.img-slot{background:repeating-linear-gradient(45deg,rgba(138,3,3,.08) 0 12px,transparent 12px 24px),#0a0a0a;border:1px dashed rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.img-slot i{font-size:2.5rem;color:rgba(217,211,199,.5)}
+.drawer{transition:transform .35s}.drawer.closed{transform:translateX(100%)}
+.backdrop,.modal{transition:opacity .3s}.backdrop.closed,.modal.closed{opacity:0;pointer-events:none}
+.modal-box{transition:transform .25s}.modal.closed .modal-box{transform:scale(.95)}
+.filter-btn.active{background:#8a0303;border-color:#ff0a0a;color:#fff;box-shadow:0 0 12px #8a0303}
+.size-btn.active,.var-btn.active{background:#fff;color:#000}
+.tab-btn.active{color:#fff;border-color:#ff0a0a}
+@keyframes bump{50%{transform:scale(1.5)}}.bump{animation:bump .4s}
+/* Animaciones nuevas */
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin 8s linear infinite;filter:drop-shadow(0 0 6px #ff0a0a)}
+@keyframes float{50%{transform:translateY(-14px)}}
+.float{animation:float 4s ease-in-out infinite}
+@keyframes glow{50%{filter:drop-shadow(0 0 25px #d9d3c7) drop-shadow(0 0 8px #ff0a0a)}}
+.glow{animation:glow 3s ease-in-out infinite}
+@keyframes vin{from{opacity:0;transform:translateY(30px) scale(.98);filter:blur(6px)}}
+.view.show{animation:vin .6s ease-out}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq{display:flex;width:max-content;animation:marq 25s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.shine{background:linear-gradient(90deg,#fff,#ff0a0a,#d9d3c7,#fff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+.fld{width:100%;background:transparent;border:1px solid rgba(255,255,255,.2);padding:.7rem 1rem;font-size:.9rem;color:#fff;text-transform:none;letter-spacing:normal;font-weight:400}
+.fld:focus{outline:none;border-color:#ff0a0a;box-shadow:0 0 10px rgba(255,10,10,.35)}
+.fld::placeholder{color:#555}
+.opt{display:flex;gap:.75rem;align-items:flex-start;border:1px solid rgba(255,255,255,.2);padding:.9rem 1rem;cursor:pointer;transition:all .2s}
+.opt b{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.opt small{display:block;color:#777;font-size:.72rem;margin-top:.15rem}
+.opt:has(input:checked){border-color:#ff0a0a;background:rgba(138,3,3,.25)}
+.opt input,.chk input{accent-color:#c1121f;margin-top:.2rem}
+.chk{display:flex;gap:.6rem;align-items:flex-start;font-size:.8rem;color:#bbb}
+.sbar-focus:focus-visible,button:focus-visible,a:focus-visible,.fld:focus-visible{outline:2px solid #ff0a0a;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.navlink{transition:all .3s}.navlink:hover{padding-left:1.5rem;background:rgba(138,3,3,.2)}
+.navlink.active{background:linear-gradient(90deg,rgba(138,3,3,.6),transparent);border-left:3px solid #ff0a0a;color:#fff}
+</style>
+</head>
+<body class="font-edgy overflow-x-hidden antialiased">
+
+<svg width="0" height="0" style="position:absolute"><symbol id="emblem" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+<circle cx="50" cy="50" r="38" fill="none" stroke="#d9d3c7" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M50 0L57 14H43ZM50 100L57 86H43ZM0 50L14 43V57ZM100 50L86 43V57Z" fill="currentColor"/>
+<text x="50" y="69" text-anchor="middle" font-family="UnifrakturMaguntia" font-size="56" fill="currentColor">R</text>
+</symbol></svg>
+
+<canvas id="embers" class="fixed inset-0 z-0 pointer-events-none"></canvas>
+
+<!-- Logo pequeño girando (esquina) -->
+<button data-go="inicio" class="fixed top-2 right-3 z-50 w-12 h-12 text-bloodhover" aria-label="Inicio"><svg viewBox="0 0 100 100" class="spin w-full h-full"><use href="#emblem"/></svg></button>
+
+<!-- Menú lateral -->
+<aside id="sidebar" class="fixed inset-y-0 left-0 w-72 max-w-[85vw] z-[45] bg-abyss/95 backdrop-blur border-r border-blood/40 flex flex-col -translate-x-full transition-transform duration-300 shadow-[8px_0_40px_rgba(0,0,0,.8)]" aria-label="Menú">
+  <button data-go="inicio" class="flex flex-col items-center py-6 border-b border-blood/30 text-white">
+    <svg viewBox="0 0 100 100" class="w-16 h-16 text-bloodhover glow"><use href="#emblem"/></svg>
+    <span class="font-gothic text-3xl flicker-text leading-none mt-2">Redemption</span>
+    <span class="text-[11px] tracking-[0.6em] text-bone font-bold uppercase mt-1">Studio</span>
+  </button>
+  <nav id="side-nav" class="flex-1 overflow-y-auto py-4 text-sm uppercase tracking-[0.2em] font-bold"></nav>
+  <div class="p-4 border-t border-white/10 text-center text-[10px] text-gray-600 uppercase tracking-[0.2em] font-bold">
+    <a href="https://www.instagram.com/redemption._studios" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-gray-300 hover:text-bloodhover mb-3 text-xs tracking-[0.2em]" aria-label="Instagram de Redemption Studio"><i class="ph ph-instagram-logo text-2xl"></i>@redemption._studios</a>
+    <br>
+    &copy; <span id="year"></span> Redemption Studio
+  </div>
+</aside>
+<div id="scrim" class="hidden fixed inset-0 bg-black/70 z-[44]"></div>
+
+<!-- Barra superior -->
+<header class="fixed top-0 inset-x-0 z-30 h-16 bg-abyss/80 backdrop-blur border-b border-blood/30 flex items-center justify-between pl-4 pr-20">
+  <button id="menu-btn" class="text-3xl text-gray-300 hover:text-white mr-3" aria-label="Abrir menú" aria-expanded="false"><i class="ph ph-list"></i></button>
+  <span id="view-title" class="hidden sm:block flex-1 font-gothic text-2xl text-gray-500"></span><span class="flex-1 sm:hidden"></span>
+  <div class="flex space-x-5 text-2xl text-gray-400">
+    <button id="search-btn" class="hover:text-white transition-all" aria-label="Buscar"><i class="ph ph-magnifying-glass"></i></button>
+    <button id="wishlist-btn" class="hover:text-bone relative transition-all" aria-label="Deseos"><i class="ph ph-heart"></i><span id="wishlist-count" class="absolute -top-1 -right-2 bg-bone text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span></button>
+    <button id="cart-btn" class="hover:text-bloodhover relative transition-all" aria-label="Carrito"><i class="ph ph-skull"></i><span id="cart-count" class="absolute -top-1 -right-2 bg-blood text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span></button>
+  </div>
+</header>
+
+<main class="pt-16 relative z-10 min-h-screen">
+
+<!-- ========== INICIO ========== -->
+<section id="v-inicio" class="view">
+  <div class="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center overflow-hidden px-4 text-center">
+    <div id="hero-bg" class="absolute inset-0 bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-void/50 to-void"></div>
+    <div class="lightning"></div>
+    <div class="relative z-10">
+      <svg viewBox="0 0 100 100" class="w-28 h-28 md:w-40 md:h-40 mx-auto text-bloodhover float glow"><use href="#emblem"/></svg>
+      <h1 class="font-gothic text-6xl md:text-8xl lg:text-9xl mt-4 shine leading-none">Redemption</h1>
+      <div class="flex items-center justify-center gap-4 mt-2">
+        <span class="h-px w-12 md:w-24 bg-blood"></span>
+        <span class="text-2xl md:text-4xl tracking-[0.6em] font-bold uppercase text-white drop-shadow-[0_0_10px_#d9d3c7]">Studio</span>
+        <span class="h-px w-12 md:w-24 bg-blood"></span>
+      </div>
+      <p class="text-blood font-bold tracking-[0.4em] uppercase text-xs md:text-sm mt-5">Goth &amp; Emo Fashion</p>
+      <p class="text-gray-400 max-w-md mx-auto my-8 text-sm tracking-widest uppercase">Moda forjada en la oscuridad. Viste tu rebelión.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button data-go="coleccion" class="bg-void border-2 border-blood px-10 py-4 uppercase tracking-[0.2em] font-bold text-sm edge hover:bg-blood">Invocar Colección</button>
+        <button data-go="lookbook" class="bg-void/60 px-10 py-4 uppercase tracking-[0.2em] font-bold text-sm edge-bone hover:bg-bone/20">Ver Ritual</button>
+      </div>
+    </div>
+  </div>
+  <div class="wire-rule"></div>
+  <div class="bg-abyss border-b border-blood/20 overflow-hidden py-4"><div class="marq text-xs uppercase tracking-[0.25em] font-bold text-gray-400" id="marq"></div></div>
+  <div class="px-4 md:px-8 py-16">
+    <h2 class="rv text-center text-4xl md:text-5xl font-gothic flicker-text mb-2">Lo Más Maldito</h2>
+    <p class="rv text-center text-gray-500 text-xs uppercase tracking-[0.3em] mb-10">Los favoritos del culto</p>
+    <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
+    <div class="rv text-center mt-10"><button data-go="coleccion" class="border border-white/30 px-8 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-white hover:text-black transition-all">Ver toda la colección <i class="ph ph-arrow-right"></i></button></div>
+    <div class="rv mt-20 grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+      <div class="wire aspect-[4/5] bg-black max-w-sm w-full mx-auto"><img id="forz-img" alt="Forzaken, nuevo drop de Redemption Studios" class="w-full h-full object-cover" loading="lazy"></div>
+      <div class="text-center md:text-left">
+        <h2 class="font-gothic text-5xl md:text-6xl flicker-text leading-none mb-4">Forzaken</h2>
+        <p class="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto md:mx-0 mb-6">El nuevo drop de Redemption Studios: playeras, mangas largas y conjuntos en negro, rojo y hueso.</p>
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+          <button data-go="coleccion" class="edge bg-void px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-blood">Ver la colección</button>
+          <button data-go="pedido" class="edge-bone px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-bone/20">Hacer pedido</button>
+        </div>
+      </div>
+    </div>
+    <button data-go="ritual" class="rv block mx-auto mt-14 wire-steel sm bg-abyss px-10 py-6 text-center">
+      <span class="text-bone text-[10px] uppercase tracking-[0.4em] font-bold">Próximo drop — Viernes 13</span>
+      <span class="block font-gothic text-4xl mt-1">Faltan <span id="mini-days" class="text-bloodhover">--</span> días</span>
+    </button>
+  </div>
+</section>
+
+<!-- ========== COLECCIÓN ========== -->
+<section id="v-coleccion" class="view hidden px-4 md:px-8 py-12 max-w-7xl mx-auto">
+  <div class="text-center mb-10"><i class="ph ph-lightning text-4xl text-bone"></i>
+    <h2 class="text-4xl md:text-5xl font-gothic flicker-text">Nuevos Engendros</h2></div>
+  <div class="flex flex-col lg:flex-row justify-between items-center gap-4 mb-10">
+    <div class="flex flex-wrap justify-center gap-2 text-xs uppercase tracking-[0.2em] font-bold">
+      <button class="filter-btn active px-4 py-2 border border-white/20 text-gray-300" data-filter="todo">Todo</button>
+      <button class="filter-btn px-4 py-2 border border-white/20 text-gray-300" data-filter="playeras">Playeras</button>
+      <button class="filter-btn px-4 py-2 border border-white/20 text-gray-300" data-filter="mangas">Mangas largas</button>
+      <button class="filter-btn px-4 py-2 border border-white/20 text-gray-300" data-filter="sinmangas">Sin mangas</button>
+      <button class="filter-btn px-4 py-2 border border-white/20 text-gray-300" data-filter="conjuntos">Conjuntos</button>
+    </div>
+    <select id="sort" class="bg-abyss border border-white/20 text-xs uppercase tracking-[0.2em] font-bold text-gray-300 px-4 py-2">
+      <option value="default">Orden del Abismo</option><option value="asc">Precio: menor a mayor</option><option value="desc">Precio: mayor a menor</option><option value="nombre">Nombre A-Z</option>
+    </select>
+  </div>
+  <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+</section>
+
+<!-- ========== LOOKBOOK ========== -->
+<section id="v-lookbook" class="view hidden px-4 md:px-8 py-12 max-w-7xl mx-auto">
+  <h2 class="text-center text-4xl md:text-5xl font-gothic flicker-text mb-10">Lookbook / Ritual</h2>
+  <div id="lookbook-grid" class="columns-2 lg:columns-3 xl:columns-4 gap-4"></div>
+</section>
+
+<!-- ========== RITUAL ========== -->
+<section id="v-ritual" class="view hidden px-4 py-16 max-w-5xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div class="wire aspect-[4/5] bg-black max-w-sm w-full mx-auto"><img id="drop-img" alt="Cartel Forzaken, nuevo drop" class="w-full h-full object-cover" loading="lazy"></div>
+    <div class="text-center">
+      <p class="text-bone text-xs uppercase tracking-[0.4em] font-bold mb-2">Próximo drop — Viernes 13</p>
+      <h2 class="text-4xl md:text-6xl font-gothic flicker-text mb-2">El Ritual se Acerca</h2>
+      <p id="ritual-date" class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-8"></p>
+      <div class="flex justify-center gap-2 md:gap-4">
+        <div class="wire sm bg-abyss w-[4.5rem] md:w-24 py-3"><span id="cd-days" class="block text-3xl md:text-4xl font-bold">00</span><span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Días</span></div>
+        <div class="wire-steel sm bg-abyss w-[4.5rem] md:w-24 py-3"><span id="cd-hours" class="block text-3xl md:text-4xl font-bold">00</span><span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Horas</span></div>
+        <div class="wire sm bg-abyss w-[4.5rem] md:w-24 py-3"><span id="cd-mins" class="block text-3xl md:text-4xl font-bold">00</span><span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Min</span></div>
+        <div class="wire-steel sm bg-abyss w-[4.5rem] md:w-24 py-3"><span id="cd-secs" class="block text-3xl md:text-4xl font-bold">00</span><span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Seg</span></div>
+      </div>
+      <button data-go="aquelarre" class="mt-10 text-xs uppercase tracking-[0.2em] font-bold text-gray-400 hover:text-white border-b border-blood pb-1">Avísame cuando empiece</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AQUELARRE ========== -->
+<section id="v-aquelarre" class="view hidden px-4 py-20 max-w-xl mx-auto text-center">
+  <div class="wire-steel sm aspect-[4/5] w-40 mx-auto mb-8 bg-black"><img id="aq-img" alt="Espalda de playera con rostro en blanco y negro" class="w-full h-full object-cover" loading="lazy"></div>
+  <h2 class="text-4xl md:text-5xl font-gothic text-blood drop-shadow-[0_0_8px_#8a0303] mb-4">El Aquelarre</h2>
+  <p class="text-gray-500 text-sm mb-8 font-bold uppercase tracking-widest leading-loose">Únete a la oscuridad. Recibe invocaciones sobre nuevos artefactos y eventos malditos.</p>
+  <form name="aquelarre" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="netlify-ajax flex border-b border-blood pb-2" data-success="Tu alma ha sido reclamada. Bienvenide al Aquelarre.">
+    <input type="hidden" name="form-name" value="aquelarre"><p class="hidden"><input name="bot-field"></p>
+    <input type="email" name="email" required placeholder="Tu Alma (Email)" class="bg-transparent w-full focus:outline-none text-sm placeholder-gray-600 font-bold uppercase tracking-widest">
+    <button type="submit" class="text-blood text-2xl hover:text-white" aria-label="Suscribirse"><i class="ph ph-envelope-simple"></i></button>
+  </form>
+</section>
+
+<!-- ========== PEDIDO ========== -->
+<section id="v-pedido" class="view hidden px-4 py-12 max-w-3xl mx-auto">
+  <h2 class="text-4xl md:text-5xl font-gothic text-blood text-center mb-2 drop-shadow-[0_0_8px_#8a0303]">Sellar el Pacto</h2>
+  <p class="text-center text-gray-500 text-xs uppercase tracking-[0.25em] mb-8">Completa tus datos y te confirmamos tu pedido</p>
+
+  <div id="order-empty" class="hidden wire-steel bg-abyss p-8 text-center">
+    <i class="ph ph-skull text-6xl text-blood/50"></i>
+    <p class="uppercase tracking-widest text-sm text-gray-400 my-4">Todavía no hay nada en tu pedido</p>
+    <button data-go="coleccion" class="edge px-8 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-blood">Ver la colección</button>
+  </div>
+
+  <div id="order-done" class="hidden wire bg-abyss p-8 text-center">
+    <i class="ph ph-seal-check text-6xl text-bloodhover"></i>
+    <h3 class="font-gothic text-4xl mt-2 mb-2">Pedido recibido</h3>
+    <p class="text-gray-400 text-sm mb-1">Tu folio es</p>
+    <p id="done-folio" class="text-2xl font-bold tracking-[0.2em] mb-4"></p>
+    <p class="text-gray-400 text-sm leading-relaxed max-w-md mx-auto mb-6">Revisaremos existencias y te escribiremos por correo o WhatsApp con los datos de pago y los tiempos de entrega. Guarda tu folio.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="https://www.instagram.com/redemption._studios" target="_blank" rel="noopener" class="edge px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-blood"><i class="ph ph-instagram-logo"></i> Escríbenos en Instagram</a>
+      <button data-go="coleccion" class="edge-bone px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-bone/20">Seguir viendo</button>
+    </div>
+  </div>
+
+  <form id="order-form" name="pedido" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="netlify-ajax hidden space-y-8" data-success="Pedido enviado. Te contactaremos pronto.">
+    <input type="hidden" name="form-name" value="pedido">
+    <p class="hidden"><label>No llenar: <input name="bot-field"></label></p>
+    <input type="hidden" name="folio" id="f-folio"><input type="hidden" name="subtotal" id="f-subtotal"><input type="hidden" name="descuento" id="f-descuento"><input type="hidden" name="envio" id="f-envio"><input type="hidden" name="total" id="f-total"><textarea name="resumen_pedido" id="f-resumen" class="hidden"></textarea>
+
+    <fieldset class="wire-steel bg-abyss p-5 md:p-6">
+      <legend class="font-gothic text-2xl text-white px-2">1. Tu pedido</legend>
+      <div id="order-items" class="divide-y divide-white/10"></div>
+      <div class="text-sm uppercase tracking-widest space-y-1 mt-4 pt-4 border-t border-white/10">
+        <div class="flex justify-between text-gray-400"><span>Subtotal</span><span id="o-subtotal"></span></div>
+        <div id="o-discount-row" class="hidden justify-between text-bone"><span>Descuento (<span id="o-discount-code"></span>)</span><span id="o-discount"></span></div>
+        <div class="flex justify-between text-gray-400"><span>Envío</span><span id="o-shipping"></span></div>
+        <div class="flex justify-between font-bold text-base pt-2 border-t border-white/10"><span>Total</span><span id="o-total"></span></div>
+      </div>
+      <button type="button" id="o-edit" class="mt-4 text-xs uppercase tracking-[0.2em] font-bold text-gray-400 hover:text-white border-b border-blood pb-1">Editar carrito o código de descuento</button>
+    </fieldset>
+
+    <fieldset class="wire-steel bg-abyss p-5 md:p-6 space-y-4">
+      <legend class="font-gothic text-2xl text-white px-2">2. Tus datos</legend>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Nombre<input type="text" name="nombre" required autocomplete="given-name" class="fld mt-1"></label>
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Apellidos<input type="text" name="apellidos" required autocomplete="family-name" class="fld mt-1"></label>
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Correo electrónico<input type="email" name="email" required autocomplete="email" class="fld mt-1"></label>
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Teléfono o WhatsApp<input type="tel" name="telefono" required autocomplete="tel" inputmode="tel" class="fld mt-1"></label>
+      </div>
+      <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Usuario de Instagram (opcional)<input type="text" name="instagram" placeholder="@tuusuario" class="fld mt-1"></label>
+    </fieldset>
+
+    <fieldset class="wire-steel bg-abyss p-5 md:p-6 space-y-4">
+      <legend class="font-gothic text-2xl text-white px-2">3. Entrega</legend>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <label class="opt"><input type="radio" name="entrega" value="Envío a domicilio" checked><span><b>Envío a domicilio</b><small>Por paquetería a tu dirección</small></span></label>
+        <label class="opt"><input type="radio" name="entrega" value="Entrega en persona"><span><b>Entrega en persona</b><small>Acordamos lugar y hora contigo</small></span></label>
+      </div>
+      <div id="addr-box" class="space-y-4">
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Calle y número<input type="text" name="calle" required autocomplete="address-line1" class="fld mt-1 addr"></label>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Colonia<input type="text" name="colonia" required class="fld mt-1 addr"></label>
+          <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Código postal<input type="text" name="cp" required inputmode="numeric" autocomplete="postal-code" class="fld mt-1 addr"></label>
+          <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Ciudad o municipio<input type="text" name="ciudad" required autocomplete="address-level2" class="fld mt-1 addr"></label>
+          <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Estado<input type="text" name="estado" required autocomplete="address-level1" class="fld mt-1 addr"></label>
+        </div>
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">País<input type="text" name="pais" required value="México" autocomplete="country-name" class="fld mt-1 addr"></label>
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Referencias de la casa (opcional)<input type="text" name="referencias" placeholder="Color de la fachada, entre qué calles…" class="fld mt-1"></label>
+      </div>
+      <div id="persona-box" class="hidden">
+        <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">¿En qué ciudad o zona te queda bien?<input type="text" name="zona_entrega" class="fld mt-1"></label>
+      </div>
+    </fieldset>
+
+    <fieldset class="wire-steel bg-abyss p-5 md:p-6 space-y-4">
+      <legend class="font-gothic text-2xl text-white px-2">4. Pago y notas</legend>
+      <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Forma de pago preferida
+        <select name="pago" required class="fld mt-1 bg-abyss"><option value="">Elige una opción</option><option>Transferencia bancaria</option><option>Depósito en tienda de conveniencia</option><option>Efectivo al recibir (solo entrega en persona)</option><option>Lo acordamos por mensaje</option></select>
+      </label>
+      <p class="text-[11px] text-gray-500 leading-relaxed">No pedimos datos de tarjeta aquí. Al confirmar tu pedido te enviamos los datos para pagar.</p>
+      <label class="block text-xs uppercase tracking-[0.15em] text-gray-400 font-bold">Notas del pedido (opcional)<textarea name="notas" rows="3" placeholder="Talla alternativa, color, dedicatoria…" class="fld mt-1"></textarea></label>
+      <label class="chk"><input type="checkbox" name="regalo" value="Sí"><span>Es un regalo</span></label>
+      <label class="chk"><input type="checkbox" name="acepto" value="Sí" required><span>Acepto los <button type="button" data-go="retornos" class="underline">retornos</button> y la <button type="button" data-go="privacidad" class="underline">privacidad</button>.</span></label>
+    </fieldset>
+
+    <button type="submit" id="order-submit" class="w-full py-4 bg-blood uppercase tracking-[0.2em] text-sm font-bold hover:bg-bloodhover shadow-[0_0_20px_rgba(138,3,3,.6)] disabled:opacity-50">Enviar pedido</button>
+  </form>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section id="v-contacto" class="view hidden px-4 py-16 max-w-xl mx-auto">
+  <h2 class="text-4xl md:text-5xl font-gothic text-bone mb-6 text-center">Invocar Ayuda</h2>
+  <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="netlify-ajax space-y-4 wire-steel bg-abyss p-8" data-success="Tu invocación fue escuchada. Responderemos desde las sombras.">
+    <input type="hidden" name="form-name" value="contacto"><p class="hidden"><input name="bot-field"></p>
+    <input type="text" name="nombre" required placeholder="Nombre" class="w-full bg-transparent border border-white/20 px-4 py-3 text-sm focus:outline-none focus:border-bone">
+    <input type="email" name="email" required placeholder="Email" class="w-full bg-transparent border border-white/20 px-4 py-3 text-sm focus:outline-none focus:border-bone">
+    <select id="asunto" name="asunto" class="w-full bg-abyss border border-white/20 px-4 py-3 text-sm"><option>Duda sobre un producto</option><option>Estado de mi pedido</option><option>Retornos y cambios</option><option>Colaboraciones</option><option>Otro</option></select>
+    <textarea name="mensaje" rows="4" required placeholder="Tu mensaje" class="w-full bg-transparent border border-white/20 px-4 py-3 text-sm focus:outline-none focus:border-bone"></textarea>
+    <button type="submit" class="w-full py-3 bg-bone/80 text-black uppercase tracking-[0.2em] text-sm font-bold hover:bg-bone transition-all">Enviar Invocación</button>
+  </form>
+  <p class="text-center mt-8 text-xs uppercase tracking-[0.2em] text-gray-500">¿Prefieres escribirnos directo?</p>
+  <a href="https://www.instagram.com/redemption._studios" target="_blank" rel="noopener" class="edge mt-3 flex items-center justify-center gap-3 py-3 text-sm uppercase tracking-[0.2em] font-bold hover:bg-blood"><i class="ph ph-instagram-logo text-2xl"></i>@redemption._studios</a>
+</section>
+
+<!-- ========== RETORNOS ========== -->
+<section id="v-retornos" class="view hidden px-4 py-16 max-w-2xl mx-auto">
+  <h2 class="text-4xl md:text-5xl font-gothic text-blood mb-6 text-center">Retornos del Inframundo</h2>
+  <div class="space-y-4 text-sm text-gray-400 leading-relaxed wire bg-abyss p-8">
+    <p>Tienes <strong class="text-white">30 días</strong> desde que recibes tu pedido para devolverlo o cambiarlo.</p>
+    <p>Las prendas deben estar sin usar, con etiquetas y en su empaque original. La joyería perforada no admite devolución por higiene.</p>
+    <p>Para iniciar un retorno escríbenos con tu número de pedido. El reembolso se procesa en 5–10 días hábiles tras recibir el artículo.</p>
+    <button id="start-return" class="text-xs uppercase tracking-[0.2em] font-bold text-white border-b border-blood pb-1">Iniciar un retorno</button>
+  </div>
+</section>
+
+<!-- ========== PRIVACIDAD ========== -->
+<section id="v-privacidad" class="view hidden px-4 py-16 max-w-2xl mx-auto">
+  <h2 class="text-4xl md:text-5xl font-gothic text-bone mb-6 text-center">Tratados de Privacidad</h2>
+  <div class="space-y-4 text-sm text-gray-400 leading-relaxed wire-steel bg-abyss p-8">
+    <p>Solo guardamos los datos de nuestros formularios (nombre, email, dirección) para procesar pedidos, responder mensajes y, si te suscribes, enviarte novedades.</p>
+    <p>Tu carrito y tu lista de deseos se guardan únicamente en tu navegador.</p>
+    <p>Nunca vendemos ni compartimos tus datos. Puedes pedir que eliminemos tu información en cualquier momento escribiéndonos.</p>
+  </div>
+</section>
+</main>
+
+<button id="to-top" class="fixed bottom-6 right-6 z-30 w-12 h-12 bg-abyss edge text-xl hidden items-center justify-center" aria-label="Volver arriba"><i class="ph ph-arrow-up"></i></button>
+<div id="backdrop" class="backdrop closed fixed inset-0 bg-black/70 backdrop-blur-sm z-50"></div>
+
+<!-- Carrito / Deseos -->
+<aside id="drawer" class="drawer closed fixed top-0 right-0 h-full w-full sm:w-[420px] bg-abyss border-l border-blood/40 z-[60] flex flex-col">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+    <div class="flex gap-6 text-xs uppercase tracking-[0.2em] font-bold">
+      <button class="tab-btn active pb-1 border-b-2 border-transparent text-gray-500" data-tab="cart">El Culto (<span id="tab-cart-count">0</span>)</button>
+      <button class="tab-btn pb-1 border-b-2 border-transparent text-gray-500" data-tab="wishlist">Deseos (<span id="tab-wish-count">0</span>)</button>
+    </div>
+    <button class="close-all text-2xl text-gray-400 hover:text-white" aria-label="Cerrar"><i class="ph ph-x"></i></button>
+  </div>
+  <div id="tab-cart" class="flex-1 flex flex-col overflow-hidden">
+    <div class="px-6 py-4 border-b border-white/10"><p id="shipping-msg" class="text-[11px] uppercase tracking-[0.15em] text-gray-400 mb-2"></p><div class="h-1 bg-white/10"><div id="shipping-bar" class="h-1 bg-blood transition-all" style="width:0"></div></div></div>
+    <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-4 space-y-4"></div>
+    <div class="border-t border-white/10 px-6 py-5 space-y-3">
+      <form id="coupon-form" class="flex gap-2"><input id="coupon-input" type="text" placeholder="Código maldito" class="flex-1 bg-transparent border border-white/20 px-3 py-2 text-xs uppercase tracking-widest focus:outline-none focus:border-blood"><button type="submit" class="px-4 border border-white/20 text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-black">Aplicar</button></form>
+      <div class="text-sm uppercase tracking-widest space-y-1">
+        <div class="flex justify-between text-gray-400"><span>Subtotal</span><span id="cart-subtotal"></span></div>
+        <div id="discount-row" class="hidden justify-between text-bone"><span>Descuento (<span id="discount-code"></span>)</span><span id="cart-discount"></span></div>
+        <div class="flex justify-between text-gray-400"><span>Envío</span><span id="cart-shipping"></span></div>
+        <div class="flex justify-between font-bold text-base pt-2 border-t border-white/10"><span>Total</span><span id="cart-total"></span></div>
+      </div>
+      <button id="checkout-btn" class="w-full py-3 bg-blood uppercase tracking-[0.2em] text-sm font-bold hover:bg-bloodhover disabled:opacity-40 disabled:cursor-not-allowed">Sellar el Pacto</button>
+      <button id="clear-cart" class="w-full text-[11px] uppercase tracking-[0.2em] text-gray-500 hover:text-bloodhover">Vaciar carrito</button>
+    </div>
+  </div>
+  <div id="tab-wishlist" class="hidden flex-1 overflow-y-auto px-6 py-4 space-y-4"></div>
+</aside>
+
+<!-- Búsqueda -->
+<div id="search-modal" class="modal closed fixed inset-0 z-[60] flex items-start justify-center pt-24 px-4">
+  <div class="modal-box w-full max-w-2xl bg-abyss wire-steel p-6">
+    <div class="flex items-center gap-3 border-b border-bone/50 pb-3"><i class="ph ph-magnifying-glass text-2xl text-bone"></i><input id="search-input" type="text" placeholder="¿Qué buscas en la oscuridad?" class="flex-1 bg-transparent focus:outline-none text-lg uppercase tracking-widest placeholder-gray-600"><button class="close-all text-2xl text-gray-400 hover:text-white" aria-label="Cerrar"><i class="ph ph-x"></i></button></div>
+    <div id="search-results" class="mt-4 max-h-[50vh] overflow-y-auto space-y-2"></div>
+  </div>
+</div>
+
+<!-- Vista rápida -->
+<div id="product-modal" class="modal closed fixed inset-0 z-[60] flex items-center justify-center px-4">
+  <div class="modal-box w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-abyss wire sm grid grid-cols-1 md:grid-cols-5 relative">
+    <button class="close-all absolute top-3 right-3 z-10 text-2xl text-gray-400 hover:text-white" aria-label="Cerrar"><i class="ph ph-x"></i></button>
+    <div id="pm-image" class="md:col-span-3 aspect-[4/3] md:aspect-auto md:min-h-[460px] bg-black"></div>
+    <div class="p-6 md:p-8 md:col-span-2 flex flex-col">
+      <p id="pm-category" class="text-bone text-xs uppercase tracking-[0.3em] font-bold mb-2"></p>
+      <h3 id="pm-name" class="text-2xl font-bold uppercase tracking-widest mb-2"></h3>
+      <p id="pm-price" class="text-blood text-xl font-bold mb-6"></p>
+      <p id="pm-desc" class="text-gray-400 text-sm leading-relaxed mb-6"></p>
+      <div id="pm-var-wrap" class="mb-6"><p id="pm-var-label" class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2 font-bold"></p><div id="pm-vars" class="flex flex-wrap gap-2"></div></div>
+      <div id="pm-sizes-wrap" class="mb-6"><p class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2 font-bold">Talla</p><div id="pm-sizes" class="flex flex-wrap gap-2"></div></div>
+      <div class="flex items-center gap-4 mb-6"><p class="text-xs uppercase tracking-[0.2em] text-gray-500 font-bold">Cantidad</p><div class="flex items-center border border-white/20"><button id="pm-minus" class="px-3 py-1 hover:bg-white/10">−</button><span id="pm-qty" class="px-4">1</span><button id="pm-plus" class="px-3 py-1 hover:bg-white/10">+</button></div></div>
+      <div class="mt-auto flex gap-3"><button id="pm-add" class="flex-1 py-3 bg-blood uppercase tracking-[0.2em] text-sm font-bold hover:bg-bloodhover">Añadir al Culto</button><button id="pm-wish" class="w-14 border border-white/20 text-2xl hover:text-bone" aria-label="Deseos"><i class="ph ph-heart"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="modal closed fixed inset-0 z-[60] flex items-center justify-center px-4">
+  <button class="close-all absolute top-6 right-6 text-3xl text-gray-400 hover:text-white" aria-label="Cerrar"><i class="ph ph-x"></i></button>
+  <button id="lb-prev" class="absolute left-4 md:left-10 text-4xl text-gray-400 hover:text-white" aria-label="Anterior"><i class="ph ph-caret-left"></i></button>
+  <div id="lb-content" class="modal-box w-full max-w-2xl aspect-[3/4] max-h-[80vh]"></div>
+  <button id="lb-next" class="absolute right-4 md:right-10 text-4xl text-gray-400 hover:text-white" aria-label="Siguiente"><i class="ph ph-caret-right"></i></button>
+  <p id="lb-counter" class="absolute bottom-6 text-xs uppercase tracking-[0.3em] text-gray-500"></p>
+</div>
+
+<div id="toasts" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[70] flex flex-col items-center gap-2 pointer-events-none"></div>
+
+<script>
+/* ===== CONFIGURACIÓN: edita aquí tus imágenes, productos y precios ===== */
+const IG_URL='https://www.instagram.com/redemption._studios';
+const MONEDA='MXN',ENVIO_GRATIS_DESDE=1500,COSTO_ENVIO=99;
+const CUPONES={SANGRE13:13,AQUELARRE:10};
+const CLD=p=>'https://res.cloudinary.com/cej2howv/image/upload/f_auto,q_auto,w_1200/'+p;
+const IMAGENES={hero:CLD('v1790828669/687801164_18049213646581896_2425989244710689396_n.webp'),forzaken:CLD('v1790828668/684234929_18049213628581896_1179458661040362785_n.webp'),drop:CLD('v1790828668/684150136_18049219337581896_4845453878624067729_n.webp'),aquelarre:CLD('v1790828668/653542346_18040353134581896_8707120289513746196_n.webp'),
+lookbook:[
+{src:CLD('v1790828668/684234929_18049213628581896_1179458661040362785_n.webp'),alt:'Grupo Forzaken frente a una cortina metálica, en rojo'},
+{src:CLD('v1790828672/652008424_18040354262581896_1884159140969626474_n.webp'),alt:'Modelo con playera negra de corona de espinas'},
+{src:CLD('v1790828669/687801164_18049213646581896_2425989244710689396_n.webp'),alt:'Dos modelos bajo los arcos de noche, en rojo'},
+{src:CLD('v1790828668/653542346_18040353134581896_8707120289513746196_n.webp'),alt:'Espalda de playera negra con rostro en blanco y negro'},
+{src:CLD('v1790828668/684115457_18049219355581896_3337217833850453642_n.webp'),alt:'Modelo en una máquina de peluches con marco de alambre de púas',marco:false},
+{src:CLD('v1790828668/684207802_18049213673581896_2117791840625883885_n.webp'),alt:'Collage con playera blanca de tres cruces y short negro'},
+{src:CLD('v1790828667/652794813_18040353872581896_7163413855208630458_n.webp'),alt:'Camisa café con estampado Redemption en la espalda'},
+{src:CLD('v1790828668/684265436_18049213655581896_6943061061854945789_n.webp'),alt:'Collage con playera negra de manga larga y medias de red'},
+{src:CLD('v1790828668/684109304_18049213682581896_6245878915181395844_n.webp'),alt:'Dos modelos con playeras de cruces, en rojo'},
+{src:CLD('v1790828668/684150136_18049219337581896_4845453878624067729_n.webp'),alt:'Cartel Forzaken, nuevo drop de Redemption Studios'},
+{src:CLD('v1790828669/788383909_18067057751581896_7416096738117801718_n.webp'),alt:'Playera gris lavada vista de espaldas'},
+{src:CLD('v1790828605/829842661_18108620585052376_1148120753677152720_n.jpg'),alt:'Playera gris lavada con estampado de cruz en el gimnasio, en blanco y negro'},
+{src:CLD('v1790828655/829658188_18108620555052376_2455140212601745485_n.jpg'),alt:'Playera Team Giovanni con estampado de espinas, en blanco y negro'},
+{src:CLD('v1790828671/828831420_18108404582052376_3125824753602403358_n.jpg'),alt:'Modelo en el gimnasio con playera negra, en blanco y negro'},
+{src:CLD('v1790828671/813832544_18069584162581896_998574968772570116_n.webp'),alt:'Sudadera negra con cruces bordadas en maniquí'},
+{src:CLD('v1790828671/813021032_18069584222581896_7357186225265065685_n.webp'),alt:'Chamarra café con botones de nudo en maniquí'},
+{src:CLD('v1790828671/813624174_18069584273581896_4049002591765614894_n.webp'),alt:'Playera negra con estampado de anime y pantalón con letras góticas moradas'},
+{src:CLD('v1790828671/813212442_18069584333581896_4308572311013884861_n.webp'),alt:'Playera negra con estampado de anime y pantalón con nubes'},
+{src:CLD('v1790828670/809209195_18069584309581896_6237155489556665628_n.webp'),alt:'Playera roja y negra con pantalón de nubes rojas'},
+{src:CLD('v1790828670/795767263_18069584264581896_7980369522261340856_n.webp'),alt:'Playera con estampado de anime y short de nubes rojas'},
+{src:CLD('v1790828671/813624063_18069584432581896_458442996077423068_n.webp'),alt:'Pantalones negros con estampado de espinas moradas'},
+{src:CLD('v1790828671/812224919_18069584423581896_6432689003851862072_n.webp'),alt:'Pantalones negros con estampados en rojo y azul'},
+{src:CLD('v1790828670/793639980_18069584444581896_4271924548885946334_n.webp'),alt:'Pantalones negros con alas de espinas en blanco y morado'},
+{src:CLD('v1790828670/809209164_18069584453581896_3083213398511484965_n.webp'),alt:'Tres pantalones con estampados góticos y de nubes'},
+{src:CLD('v1790828671/813733914_18069584477581896_125459442246551251_n.webp'),alt:'Tres playeras con estampados de anime'},
+{src:CLD('v1790828670/809209161_18069584474581896_2441090606829211698_n.webp'),alt:'Tres playeras negras con estampados en rojo'},
+{src:CLD('v1790828670/792820480_18067580363581896_2031527473355245062_n.webp'),alt:'Playeras tie-dye en rojo y negro'},
+{src:CLD('v1790828669/792667283_18067580309581896_1657697526161248838_n.webp'),alt:'Dos playeras negras con estampados al frente y en la espalda'},
+{src:CLD('v1790828672/829310807_18108404612052376_5787535419352332575_n.jpg'),alt:'Empaque con lobo estampado de Redemption Studios'}]};
+const PRODUCTOS=[
+{id:'breathe-divinity',nombre:'Playera Breathe Divinity',precio:450,categoria:'playeras',fotos:[CLD('v1790828669/790024856_18067580213581896_6889060322059661393_n.webp')],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con el estampado Breathe Divinity en el pecho y las mangas. En la espalda, cruz con alas en blanco y rosa.'},
+{id:'conjunto-breathe',nombre:'Conjunto Breathe Divinity',precio:850,categoria:'conjuntos',fotos:[CLD('v1790828669/790024856_18067580213581896_6889060322059661393_n.webp')],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con estampado en rosa y blanco, más pantalón lavado con calavera y rosas en la pierna.'},
+{id:'tiedye-metal',nombre:'Playera Tie-Dye Metal',precio:480,categoria:'playeras',fotos:[CLD('v1790828669/790024862_18067580297581896_8429353944660031328_n.webp')],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Azul','Rojo','Verde','Morado']},etiqueta:'Edición limitada',descripcion:'Playera con efecto tie-dye en cuatro colores, personaje de caricatura al frente y letras metal en el cuello.'},
+{id:'wolves-flames',nombre:'Playera Wolves Flames',precio:450,categoria:'playeras',fotos:[CLD('v1790828669/790086753_18067580249581896_7193917638731636789_n.webp')],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Café','Hueso','Negro']},etiqueta:'Más vendido',descripcion:'Playera con estampado de llamas y alas en toda la espalda. Disponible en café, hueso y negro.'},
+{id:'mangas-largas',nombre:'Manga larga Jersey',precio:520,categoria:'mangas',fotos:[CLD('v1790828672/829098355_18108620633052376_9130177380830099196_n.jpg')],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Cruz de hierro','Herradura']},etiqueta:'',descripcion:'Manga larga con estampado grande al frente y detalles en las mangas. Dos diseños: cruz de hierro en bloques beige y negro, o herradura con cruz sobre negro.'},
+{id:'wolves-back',nombre:'Playera Wolves Back Print',precio:450,categoria:'playeras',fotos:[CLD('v1790828669/785200866_18067580156581896_6423449904958552565_n.webp')],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Heaven Has to Wait','Lobo y serpiente']},etiqueta:'',descripcion:'Playera negra con estampado grande en la espalda. Elige entre dos diseños.'},
+{id:'tank-lavado',nombre:'Top sin mangas lavado',precio:380,categoria:'sinmangas',fotos:[CLD('v1790828669/790059394_18067580504581896_3812045264416952145_n.webp')],tallas:['S','M','L'],variantes:{label:'Color',opciones:['Verde','Gris']},etiqueta:'',descripcion:'Top sin mangas con efecto lavado y letras góticas grandes en la espalda.'},
+{id:'luna-relampagos',nombre:'Playera Luna y Relámpagos',precio:450,categoria:'playeras',fotos:[CLD('v1790828670/792687906_18067583198581896_5802382385759399339_n.webp')],tallas:['S','M','L','XL'],etiqueta:'',descripcion:'Playera negra con un personaje bajo la luna llena, relámpagos y letras góticas en contorno.'}];
+const DESTACADOS=['breathe-divinity','tiedye-metal','wolves-flames'];
+const CATEGORIAS={playeras:'Playeras',mangas:'Mangas largas',sinmangas:'Sin mangas',conjuntos:'Conjuntos'};
+const NAV=[['inicio','ph-house','Inicio'],['coleccion','ph-skull','Nuevos Engendros'],['pedido','ph-package','Hacer pedido'],['lookbook','ph-camera','Lookbook'],['ritual','ph-hourglass','Próximo Ritual'],['aquelarre','ph-envelope-simple','El Aquelarre'],['contacto','ph-chat-teardrop','Contacto'],['retornos','ph-arrows-counter-clockwise','Retornos'],['privacidad','ph-eye-closed','Privacidad']];
+/* ================================================================== */
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const money=n=>'$'+(Number.isInteger(n)?n.toLocaleString('es-MX'):n.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2}))+' '+MONEDA;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const imgSlot=(src,alt,cl='')=>src?`<img src="${esc(src)}" alt="${esc(alt)}" class="w-full h-full object-cover ${cl}">`:`<div class="img-slot w-full h-full"><i class="ph ph-image"></i><span>Tu imagen aquí</span></div>`;
+const photo=(src,alt,cl='')=>src?`<div class="ph-wrap w-full h-full"><img src="${esc(src)}" alt="" aria-hidden="true" class="bg" loading="lazy"><img src="${esc(src)}" alt="${esc(alt)}" class="fg ${cl}" loading="lazy" decoding="async"></div>`:imgSlot('','');
+const store={get(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+const findProduct=id=>PRODUCTOS.find(p=>p.id===id);
+let cart=store.get('redemption-cart',[]).filter(i=>findProduct(i.id)),wishlist=store.get('redemption-wishlist',[]).filter(findProduct),coupon=store.get('redemption-coupon',null);
+
+function toast(msg,color='blood'){const el=document.createElement('div');el.className=`bg-abyss border border-${color} px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 opacity-0 translate-y-2`;el.textContent=msg;$('#toasts').appendChild(el);requestAnimationFrame(()=>el.classList.remove('opacity-0','translate-y-2'));setTimeout(()=>{el.classList.add('opacity-0');setTimeout(()=>el.remove(),300)},2800)}
+const bump=el=>{el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump')};
+
+/* ---- Revelado animado ---- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+const watch=()=>$$('.rv:not(.in)').forEach(el=>io.observe(el));
+
+/* ---- Navegación por pestañas ---- */
+$('#side-nav').innerHTML=NAV.map(([v,ic,t])=>`<button data-go="${v}" class="navlink w-full flex items-center gap-3 px-6 py-3 text-left text-gray-400"><i class="ph ${ic} text-xl text-bone"></i>${t}</button>`).join('');
+$('#marq').innerHTML=Array(2).fill('<span class="px-8"><i class="ph ph-truck text-blood"></i> Envío gratis desde '+money(ENVIO_GRATIS_DESDE)+'</span><span class="px-8"><i class="ph ph-arrows-counter-clockwise text-bone"></i> 30 días para retornos</span><span class="px-8"><i class="ph ph-seal-check text-blood"></i> Código <b class="text-white">SANGRE13</b> = 13% off</span>').join('');
+let orderSent=false;
+function go(v){
+  if(!$('#v-'+v))v='inicio';
+  closeAll();
+  $$('.view').forEach(s=>{s.classList.add('hidden');s.classList.remove('show')});
+  const s=$('#v-'+v);s.classList.remove('hidden');void s.offsetWidth;s.classList.add('show');
+  $$('.navlink').forEach(b=>b.classList.toggle('active',b.dataset.go===v));
+  $('#view-title').textContent=(NAV.find(n=>n[0]===v)||[])[2]||'';
+  if(location.hash!=='#'+v)history.replaceState(null,'','#'+v);
+  if(v==='pedido'){orderSent=false;renderOrder()}
+  toggleSide(false);window.scrollTo({top:0});setTimeout(watch,50);
+}
+let sideOpen=false;
+function toggleSide(open){sideOpen=open;$('#sidebar').classList.toggle('-translate-x-full',!open);$('#scrim').classList.toggle('hidden',!open);$('#menu-btn').setAttribute('aria-expanded',open)}
+document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
+$('#menu-btn').addEventListener('click',()=>toggleSide($('#sidebar').classList.contains('-translate-x-full')));
+$('#scrim').addEventListener('click',()=>toggleSide(false));
+window.addEventListener('hashchange',()=>go(location.hash.slice(1)));
+$('#start-return').addEventListener('click',()=>{go('contacto');$('#asunto').value='Retornos y cambios'});
+
+/* ---- Menú deslizable: arrastra desde el borde izquierdo para abrir, hacia la izquierda para cerrar ---- */
+(()=>{const sb=$('#sidebar');let sx=0,sy=0,dx=0,lock=null,on=false;
+document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;const t=e.touches[0];sx=t.clientX;sy=t.clientY;dx=0;lock=null;on=sideOpen||sx<=28},{passive:true});
+document.addEventListener('touchmove',e=>{if(!on)return;const t=e.touches[0];dx=t.clientX-sx;const dy=t.clientY-sy;
+if(!lock&&(Math.abs(dx)>10||Math.abs(dy)>10))lock=Math.abs(dx)>Math.abs(dy)?'x':'y';
+if(lock!=='x')return;const w=sb.offsetWidth,x=Math.max(-w,Math.min(0,(sideOpen?0:-w)+dx));sb.style.transition='none';sb.style.transform=`translateX(${x}px)`},{passive:true});
+document.addEventListener('touchend',()=>{if(!on)return;sb.style.transition='';sb.style.transform='';if(lock==='x'){const w=sb.offsetWidth;toggleSide(sideOpen?dx>-w*.3:dx>w*.3)}on=false;lock=null},{passive:true});
+})();
+
+/* ---- Modales y paneles ---- */
+function closeAll(){$$('.modal').forEach(m=>m.classList.add('closed'));$('#drawer').classList.add('closed');$('#backdrop').classList.add('closed');document.body.style.overflow=''}
+function openModal(id){closeAll();$('#'+id).classList.remove('closed');$('#backdrop').classList.remove('closed');document.body.style.overflow='hidden'}
+function switchTab(t){$$('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));$('#tab-cart').classList.toggle('hidden',t!=='cart');$('#tab-wishlist').classList.toggle('hidden',t!=='wishlist')}
+function openDrawer(t){closeAll();switchTab(t);$('#drawer').classList.remove('closed');$('#backdrop').classList.remove('closed');document.body.style.overflow='hidden'}
+$('#backdrop').addEventListener('click',closeAll);
+$$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeAll()}));
+$$('.close-all').forEach(b=>b.addEventListener('click',closeAll));
+$$('.tab-btn').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeAll();toggleSide(false)}if(!$('#lightbox').classList.contains('closed')){if(e.key==='ArrowLeft')showLightbox(lbIndex-1);if(e.key==='ArrowRight')showLightbox(lbIndex+1)}});
+
+/* ---- Hero ---- */
+$('#hero-bg').style.backgroundImage=`url("${IMAGENES.hero}")`;$('#hero-bg').style.backgroundPosition='50% 75%';$('#hero-bg').classList.add('brightness-[.5]');
+$('#forz-img').src=IMAGENES.forzaken;$('#drop-img').src=IMAGENES.drop;$('#aq-img').src=IMAGENES.aquelarre;
+
+/* ---- Productos ---- */
+let currentFilter='todo',currentSort='default';
+const card=(p,i)=>{const pu=i%2,l=wishlist.includes(p.id);return `
+<div class="rv group relative bg-abyss p-2 ${pu?'wire-steel':'wire'}" style="transition-delay:${(i%3)*90}ms">
+<div class="relative overflow-hidden aspect-[4/3] mb-4 bg-black cursor-pointer" data-quickview="${p.id}">${photo(p.fotos[0],p.nombre,'goth-img')}
+${p.etiqueta?`<span class="absolute top-3 left-3 bg-blood text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1">${esc(p.etiqueta)}</span>`:''}
+<div class="absolute inset-x-0 bottom-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300"><span class="block text-center bg-void/90 border border-white/20 py-2 text-[11px] uppercase tracking-[0.2em] font-bold">Vista rápida</span></div></div>
+<button class="absolute top-6 right-6 text-2xl ${l?'text-bone':'text-white/70'} drop-shadow-[0_0_4px_#000] hover:text-bone hover:scale-125 transition-all" data-wish="${p.id}" aria-label="Deseos"><i class="ph${l?'-fill':''} ph-heart"></i></button>
+<div class="text-center px-2 pb-2"><p class="text-[10px] uppercase tracking-[0.3em] text-gray-500 mb-1">${CATEGORIAS[p.categoria]}</p>
+<h3 class="text-lg font-bold uppercase tracking-widest mb-1 ${pu?'group-hover:text-bone':'group-hover:text-bloodhover'} transition-colors">${esc(p.nombre)}</h3>
+<p class="${pu?'text-blood':'text-bone'} text-sm mb-4 font-bold">${money(p.precio)}</p>
+<button class="w-full py-2 border border-white/20 uppercase tracking-[0.2em] text-xs font-bold hover:bg-white hover:text-black transition-all" data-add="${p.id}">Añadir al Culto</button></div></div>`};
+function renderProducts(){
+  let l=PRODUCTOS.filter(p=>currentFilter==='todo'||p.categoria===currentFilter);
+  if(currentSort==='asc')l=[...l].sort((a,b)=>a.precio-b.precio);
+  if(currentSort==='desc')l=[...l].sort((a,b)=>b.precio-a.precio);
+  if(currentSort==='nombre')l=[...l].sort((a,b)=>a.nombre.localeCompare(b.nombre));
+  $('#product-grid').innerHTML=l.map(card).join('');
+  $('#featured-grid').innerHTML=DESTACADOS.map(findProduct).map(card).join('');
+  setTimeout(watch,30);
+}
+document.addEventListener('click',e=>{
+  const qv=e.target.closest('[data-quickview]'),w=e.target.closest('[data-wish]'),a=e.target.closest('[data-add]');
+  if(w)return toggleWishlist(w.dataset.wish);
+  if(qv)return openProduct(qv.dataset.quickview);
+  if(a){const p=findProduct(a.dataset.add);(p.tallas.length||p.variantes)?openProduct(p.id,true):addToCart(p.id,null,null,1)}
+});
+function setFilter(f){currentFilter=f;$$('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));renderProducts()}
+$$('.filter-btn').forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));
+$('#sort').addEventListener('change',e=>{currentSort=e.target.value;renderProducts()});
+
+/* ---- Vista rápida ---- */
+let pmProduct=null,pmSize=null,pmVar=null,pmQty=1;
+function openProduct(id,needChoice=false){
+  const p=pmProduct=findProduct(id);pmSize=null;pmVar=null;pmQty=1;
+  $('#pm-image').innerHTML=photo(p.fotos[0],p.nombre);$('#pm-category').textContent=CATEGORIAS[p.categoria];$('#pm-name').textContent=p.nombre;$('#pm-price').textContent=money(p.precio);$('#pm-desc').textContent=p.descripcion;$('#pm-qty').textContent=1;
+  $('#pm-var-wrap').classList.toggle('hidden',!p.variantes);
+  if(p.variantes){$('#pm-var-label').textContent=p.variantes.label;$('#pm-vars').innerHTML=p.variantes.opciones.map(v=>`<button class="var-btn px-3 py-2 border border-white/20 text-xs font-bold hover:border-white" data-var="${esc(v)}">${esc(v)}</button>`).join('')}
+  $('#pm-sizes-wrap').classList.toggle('hidden',!p.tallas.length);
+  $('#pm-sizes').innerHTML=p.tallas.map(t=>`<button class="size-btn min-w-[44px] px-3 py-2 border border-white/20 text-xs font-bold hover:border-white" data-size="${t}">${t}</button>`).join('');
+  updatePmWish();openModal('product-modal');if(needChoice)toast('Elige tu talla'+(p.variantes?' y '+p.variantes.label.toLowerCase():''),'bone');
+}
+$('#pm-sizes').addEventListener('click',e=>{const b=e.target.closest('[data-size]');if(!b)return;pmSize=b.dataset.size;$$('#pm-sizes .size-btn').forEach(s=>s.classList.toggle('active',s===b))});
+$('#pm-vars').addEventListener('click',e=>{const b=e.target.closest('[data-var]');if(!b)return;pmVar=b.dataset.var;$$('#pm-vars .var-btn').forEach(s=>s.classList.toggle('active',s===b))});
+$('#pm-minus').addEventListener('click',()=>{pmQty=Math.max(1,pmQty-1);$('#pm-qty').textContent=pmQty});
+$('#pm-plus').addEventListener('click',()=>{pmQty=Math.min(10,pmQty+1);$('#pm-qty').textContent=pmQty});
+$('#pm-add').addEventListener('click',()=>{
+  if(pmProduct.variantes&&!pmVar){toast('Elige '+pmProduct.variantes.label.toLowerCase(),'bone');bump($('#pm-vars'));return}
+  if(pmProduct.tallas.length&&!pmSize){toast('Primero elige una talla','bone');bump($('#pm-sizes'));return}
+  addToCart(pmProduct.id,pmSize,pmVar,pmQty);closeAll()});
+$('#pm-wish').addEventListener('click',()=>{toggleWishlist(pmProduct.id);updatePmWish()});
+function updatePmWish(){const l=wishlist.includes(pmProduct.id);$('#pm-wish').innerHTML=`<i class="ph${l?'-fill':''} ph-heart"></i>`;$('#pm-wish').classList.toggle('text-bone',l)}
+
+/* ---- Carrito ---- */
+const saveCart=()=>{store.set('redemption-cart',cart);renderCart()};
+function addToCart(id,talla,variante,cantidad){const ex=cart.find(i=>i.id===id&&i.talla===talla&&(i.variante||null)===variante);if(ex)ex.cantidad=Math.min(10,ex.cantidad+cantidad);else cart.push({id,talla,variante,cantidad});saveCart();bump($('#cart-count'));toast(`${findProduct(id).nombre} se unió al culto`)}
+let entrega='Envío a domicilio';
+function cartTotals(){const subtotal=cart.reduce((s,i)=>s+findProduct(i.id).precio*i.cantidad,0),discount=coupon?subtotal*CUPONES[coupon]/100:0,after=subtotal-discount,shipping=!subtotal||after>=ENVIO_GRATIS_DESDE||entrega==='Entrega en persona'?0:COSTO_ENVIO;return{subtotal,discount,shipping,after,total:after+shipping}}
+function renderCart(){
+  const n=cart.reduce((s,i)=>s+i.cantidad,0);$('#cart-count').textContent=n;$('#tab-cart-count').textContent=n;
+  $('#cart-items').innerHTML=!cart.length?`<div class="h-full flex flex-col items-center justify-center text-center text-gray-500 gap-4 py-12"><i class="ph ph-skull text-6xl text-blood/50"></i><p class="uppercase tracking-widest text-sm">Tu culto está vacío</p><button data-go="coleccion" class="text-xs uppercase tracking-[0.2em] font-bold text-white border-b border-blood pb-1">Ver colección</button></div>`
+  :cart.map((it,idx)=>{const p=findProduct(it.id);return `<div class="flex gap-4 border-b border-white/5 pb-4"><div class="w-20 h-24 flex-shrink-0 bg-black">${imgSlot(p.fotos[0],p.nombre)}</div><div class="flex-1 flex flex-col"><p class="text-sm font-bold uppercase tracking-widest">${esc(p.nombre)}</p>${it.variante?`<p class="text-[11px] text-gray-500 uppercase tracking-widest">${esc(it.variante)}</p>`:''}${it.talla?`<p class="text-[11px] text-gray-500 uppercase tracking-widest">Talla: ${esc(it.talla)}</p>`:''}<p class="text-bone text-sm font-bold mt-1">${money(p.precio*it.cantidad)}</p><div class="mt-auto flex items-center justify-between"><div class="flex items-center border border-white/20 text-sm"><button class="px-2 hover:bg-white/10" data-qty="${idx}" data-delta="-1">−</button><span class="px-3">${it.cantidad}</span><button class="px-2 hover:bg-white/10" data-qty="${idx}" data-delta="1">+</button></div><button class="text-gray-500 hover:text-bloodhover text-lg" data-remove="${idx}" aria-label="Quitar"><i class="ph ph-trash"></i></button></div></div></div>`}).join('');
+  const t=cartTotals();
+  $('#cart-subtotal').textContent=money(t.subtotal);$('#cart-shipping').textContent=t.shipping?money(t.shipping):t.subtotal?'Gratis':money(0);$('#cart-total').textContent=money(t.total);
+  $('#discount-row').classList.toggle('hidden',!coupon);$('#discount-row').classList.toggle('flex',!!coupon);$('#discount-code').textContent=coupon||'';$('#cart-discount').textContent='-'+money(t.discount);
+  $('#checkout-btn').disabled=!cart.length;
+  const miss=ENVIO_GRATIS_DESDE-t.after;
+  $('#shipping-msg').textContent=!cart.length?`Envío gratis en pedidos desde ${money(ENVIO_GRATIS_DESDE)}`:miss>0?`Te faltan ${money(miss)} para envío gratis`:'¡Tu envío es gratis!';
+  $('#shipping-bar').style.width=Math.min(100,t.after/ENVIO_GRATIS_DESDE*100)+'%';
+  renderOrder();
+}
+$('#cart-items').addEventListener('click',e=>{
+  const q=e.target.closest('[data-qty]'),r=e.target.closest('[data-remove]');
+  if(q){const it=cart[q.dataset.qty];it.cantidad+=Number(q.dataset.delta);if(it.cantidad<1)cart.splice(q.dataset.qty,1);else it.cantidad=Math.min(10,it.cantidad);saveCart()}
+  if(r){cart.splice(r.dataset.remove,1);saveCart();toast('Artículo desterrado')}
+});
+$('#clear-cart').addEventListener('click',()=>{if(cart.length&&confirm('¿Vaciar todo el carrito?')){cart=[];saveCart()}});
+$('#coupon-form').addEventListener('submit',e=>{
+  e.preventDefault();const c=$('#coupon-input').value.trim().toUpperCase();
+  if(!c){coupon=null;store.set('redemption-coupon',null)}
+  else if(CUPONES[c]){coupon=c;store.set('redemption-coupon',c);toast(`Código ${c} aplicado: ${CUPONES[c]}% off`,'bone');$('#coupon-input').value=''}
+  else toast('Ese código no existe en este plano');
+  renderCart();
+});
+$('#cart-btn').addEventListener('click',()=>openDrawer('cart'));
+$('#checkout-btn').addEventListener('click',()=>{if(cart.length)go('pedido')});
+
+/* ---- Deseos ---- */
+function toggleWishlist(id){
+  const p=findProduct(id);
+  if(wishlist.includes(id)){wishlist=wishlist.filter(w=>w!==id);toast(`${p.nombre} salió de tus deseos`,'bone')}else{wishlist.push(id);toast(`${p.nombre} añadido a deseos`,'bone');bump($('#wishlist-count'))}
+  store.set('redemption-wishlist',wishlist);renderWishlist();renderProducts();
+}
+function renderWishlist(){
+  $('#wishlist-count').textContent=wishlist.length;$('#tab-wish-count').textContent=wishlist.length;
+  $('#tab-wishlist').innerHTML=!wishlist.length?`<div class="flex flex-col items-center text-center text-gray-500 gap-4 py-12"><i class="ph ph-heart-break text-6xl text-bone/50"></i><p class="uppercase tracking-widest text-sm">Aún no deseas nada... raro</p></div>`
+  :wishlist.map(id=>{const p=findProduct(id);return `<div class="flex gap-4 border-b border-white/5 pb-4"><div class="w-20 h-24 flex-shrink-0 bg-black">${imgSlot(p.fotos[0],p.nombre)}</div><div class="flex-1 flex flex-col"><p class="text-sm font-bold uppercase tracking-widest">${esc(p.nombre)}</p><p class="text-bone text-sm font-bold mt-1">${money(p.precio)}</p><div class="mt-auto flex items-center justify-between"><button class="text-[11px] uppercase tracking-[0.2em] font-bold border border-white/20 px-3 py-1 hover:bg-white hover:text-black" data-wish-view="${p.id}">Ver / Añadir</button><button class="text-gray-500 hover:text-bloodhover text-lg" data-wish-remove="${p.id}" aria-label="Quitar"><i class="ph ph-trash"></i></button></div></div></div>`}).join('');
+}
+$('#tab-wishlist').addEventListener('click',e=>{const v=e.target.closest('[data-wish-view]'),r=e.target.closest('[data-wish-remove]');if(v)openProduct(v.dataset.wishView);if(r)toggleWishlist(r.dataset.wishRemove)});
+$('#wishlist-btn').addEventListener('click',()=>openDrawer('wishlist'));
+
+/* ---- Búsqueda ---- */
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+function renderSearch(){
+  const q=norm($('#search-input').value.trim()),r=PRODUCTOS.filter(p=>!q||norm(p.nombre+' '+CATEGORIAS[p.categoria]+' '+p.descripcion).includes(q));
+  $('#search-results').innerHTML=r.length?r.map(p=>`<button class="w-full flex items-center gap-4 p-2 hover:bg-white/5 text-left" data-search-open="${p.id}"><div class="w-12 h-14 flex-shrink-0 bg-black">${imgSlot(p.fotos[0],p.nombre)}</div><div class="flex-1"><p class="text-sm font-bold uppercase tracking-widest">${esc(p.nombre)}</p><p class="text-[11px] text-gray-500 uppercase tracking-widest">${CATEGORIAS[p.categoria]}</p></div><span class="text-bone text-sm font-bold">${money(p.precio)}</span></button>`).join(''):'<p class="text-center text-gray-500 uppercase tracking-widest text-sm py-6">Nada responde a tu llamado.</p>';
+}
+$('#search-btn').addEventListener('click',()=>{openModal('search-modal');$('#search-input').value='';renderSearch();setTimeout(()=>$('#search-input').focus(),50)});
+$('#search-input').addEventListener('input',renderSearch);
+$('#search-results').addEventListener('click',e=>{const b=e.target.closest('[data-search-open]');if(b)openProduct(b.dataset.searchOpen)});
+
+/* ---- Lookbook ---- */
+let lbIndex=0;
+$('#lookbook-grid').innerHTML=IMAGENES.lookbook.map((it,i)=>`<button class="group block w-full mb-4 break-inside-avoid overflow-hidden bg-abyss ${it.marco===false?'border border-white/10':'wire-steel sm'}" data-lb="${i}" aria-label="Ver foto ${i+1}: ${esc(it.alt)}"><img src="${esc(it.src)}" alt="${esc(it.alt)}" loading="lazy" decoding="async" class="block w-full h-auto goth-img"></button>`).join('');
+$('#lookbook-grid').addEventListener('click',e=>{const b=e.target.closest('[data-lb]');if(b){openModal('lightbox');showLightbox(+b.dataset.lb)}});
+function showLightbox(i){const t=IMAGENES.lookbook.length;lbIndex=(i+t)%t;const it=IMAGENES.lookbook[lbIndex];$('#lb-content').innerHTML=`<img src="${esc(it.src)}" alt="${esc(it.alt)}" class="w-full h-full object-contain">`;$('#lb-counter').textContent=`${lbIndex+1} / ${t}`}
+$('#lb-prev').addEventListener('click',()=>showLightbox(lbIndex-1));
+$('#lb-next').addEventListener('click',()=>showLightbox(lbIndex+1));
+
+/* ---- Cuenta regresiva al próximo viernes 13 ---- */
+function nextFriday13(){const n=new Date(),d=new Date(n.getFullYear(),n.getMonth(),13);if(d<=n)d.setMonth(d.getMonth()+1);while(d.getDay()!==5)d.setMonth(d.getMonth()+1);return d}
+const ritual=nextFriday13();
+$('#ritual-date').textContent=ritual.toLocaleDateString('es',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+function tick(){const d=Math.max(0,ritual-new Date()),p=n=>String(n).padStart(2,'0');
+  $('#cd-days').textContent=p(Math.floor(d/864e5));$('#mini-days').textContent=Math.floor(d/864e5);$('#cd-hours').textContent=p(Math.floor(d/36e5)%24);$('#cd-mins').textContent=p(Math.floor(d/6e4)%60);$('#cd-secs').textContent=p(Math.floor(d/1e3)%60)}
+tick();setInterval(tick,1000);
+
+/* ---- Pedido detallado ---- */
+function setEntrega(v){entrega=v;const home=v==='Envío a domicilio';$('#addr-box').classList.toggle('hidden',!home);$('#persona-box').classList.toggle('hidden',home);$$('#addr-box .addr').forEach(i=>i.required=home);renderCart()}
+$$('#order-form input[name=entrega]').forEach(r=>r.addEventListener('change',()=>setEntrega(r.value)));
+$('#o-edit').addEventListener('click',()=>openDrawer('cart'));
+const orderLines=()=>{const t=cartTotals(),l=cart.map(i=>{const p=findProduct(i.id);return `${i.cantidad} x ${p.nombre}${i.variante?' ['+i.variante+']':''}${i.talla?' (Talla '+i.talla+')':''} - ${money(p.precio*i.cantidad)}`});l.push(`Subtotal: ${money(t.subtotal)}`);if(coupon)l.push(`Descuento ${coupon}: -${money(t.discount)}`);l.push(`Envío: ${money(t.shipping)}`,`Total: ${money(t.total)}`);return l.join('\n')};
+function renderOrder(){
+  const has=cart.length>0;
+  $('#order-done').classList.toggle('hidden',!orderSent);$('#order-empty').classList.toggle('hidden',has||orderSent);$('#order-form').classList.toggle('hidden',!has||orderSent);
+  if(!has)return;
+  $('#order-items').innerHTML=cart.map(it=>{const p=findProduct(it.id),det=[it.variante,it.talla?'Talla '+it.talla:''].filter(Boolean).map(esc).join(', ');return `<div class="flex gap-3 py-3"><div class="w-16 h-16 flex-shrink-0 bg-black">${imgSlot(p.fotos[0],p.nombre)}</div><div class="flex-1 min-w-0"><p class="text-sm font-bold uppercase tracking-widest">${esc(p.nombre)}</p><p class="text-[11px] text-gray-500 uppercase tracking-widest">${det}</p></div><div class="text-right text-sm"><p class="text-gray-500">x${it.cantidad}</p><p class="font-bold text-bone">${money(p.precio*it.cantidad)}</p></div></div>`}).join('');
+  const t=cartTotals();$('#o-subtotal').textContent=money(t.subtotal);$('#o-shipping').textContent=t.shipping?money(t.shipping):'Gratis';$('#o-total').textContent=money(t.total);
+  $('#o-discount-row').classList.toggle('hidden',!coupon);$('#o-discount-row').classList.toggle('flex',!!coupon);$('#o-discount-code').textContent=coupon||'';$('#o-discount').textContent='-'+money(t.discount);
+}
+let lastFolio='';
+function prepOrder(){const t=cartTotals();lastFolio='RS-'+new Date().toISOString().slice(2,10).replace(/-/g,'')+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
+  $('#f-folio').value=lastFolio;$('#f-subtotal').value=money(t.subtotal);$('#f-descuento').value=coupon?`${coupon}: -${money(t.discount)}`:'';$('#f-envio').value=money(t.shipping);$('#f-total').value=money(t.total);$('#f-resumen').value=orderLines()}
+
+/* ---- Formularios (Netlify Forms) ---- */
+$$('form.netlify-ajax').forEach(f=>f.addEventListener('submit',async e=>{
+  e.preventDefault();const isOrder=f.id==='order-form';
+  if(isOrder){if(!cart.length){toast('Tu pedido está vacío');return}prepOrder()}
+  const b=f.querySelector('[type=submit]');b.disabled=true;
+  try{
+    const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
+    if(!r.ok)throw 0;
+    if(isOrder){orderSent=true;$('#done-folio').textContent=lastFolio;cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'})}
+    else{toast(f.dataset.success,'bone');f.reset()}
+  }catch{toast('No se pudo enviar. Intenta de nuevo.')}finally{b.disabled=false}
+}));
+
+/* ---- Volver arriba ---- */
+window.addEventListener('scroll',()=>{const s=scrollY>600;$('#to-top').classList.toggle('hidden',!s);$('#to-top').classList.toggle('flex',s)});
+$('#to-top').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+/* ---- Brasas flotantes (fondo) ---- */
+(()=>{const c=$('#embers'),x=c.getContext('2d');let W,H;const P=[];
+  const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight};rs();addEventListener('resize',rs);
+  const mk=()=>({x:Math.random()*W,y:H+10,r:Math.random()*2+.5,v:Math.random()*.8+.3,d:Math.random()*2*Math.PI,p:Math.random()<.3});
+  for(let i=0;i<50;i++){const q=mk();q.y=Math.random()*H;P.push(q)}
+  (function f(){x.clearRect(0,0,W,H);P.forEach((q,i)=>{q.y-=q.v;q.d+=.02;q.x+=Math.sin(q.d)*.5;if(q.y<-10)P[i]=mk();x.fillStyle=q.p?'rgba(217,211,199,.45)':'rgba(255,10,10,.6)';x.shadowBlur=8;x.shadowColor=x.fillStyle;x.beginPath();x.arc(q.x,q.y,q.r,0,7);x.fill()});requestAnimationFrame(f)})();
+})();
+
+$('#year').textContent=new Date().getFullYear();
+renderProducts();renderCart();renderWishlist();
+go(location.hash.slice(1)||'inicio');
+</script>
+</body>
+</html>
