@@ -205,7 +205,7 @@ body{background:#050505;color:#fff;cursor:crosshair}
       </div>
     </div>
     <button data-go="ritual" class="rv block mx-auto mt-14 wire-steel sm bg-abyss px-10 py-6 text-center">
-      <span class="text-bone text-[10px] uppercase tracking-[0.4em] font-bold">Próximo drop — Viernes 13</span>
+      <span class="text-bone text-[10px] uppercase tracking-[0.4em] font-bold">Drop especial — 9 de octubre</span>
       <span class="block font-gothic text-4xl mt-1">Faltan <span id="mini-days" class="text-bloodhover">--</span> días</span>
     </button>
   </div>
@@ -241,7 +241,7 @@ body{background:#050505;color:#fff;cursor:crosshair}
   <div class="grid md:grid-cols-2 gap-10 items-center">
     <div class="wire aspect-[4/5] bg-black max-w-sm w-full mx-auto"><img id="drop-img" alt="Cartel Forzaken, nuevo drop" class="w-full h-full object-cover" loading="lazy"></div>
     <div class="text-center">
-      <p class="text-bone text-xs uppercase tracking-[0.4em] font-bold mb-2">Próximo drop — Viernes 13</p>
+      <p class="text-bone text-xs uppercase tracking-[0.4em] font-bold mb-2">Drop especial — 9 de octubre</p>
       <h2 class="text-4xl md:text-6xl font-gothic flicker-text mb-2">El Ritual se Acerca</h2>
       <p id="ritual-date" class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-8"></p>
       <div class="flex justify-center gap-2 md:gap-4">
@@ -464,28 +464,28 @@ body{background:#050505;color:#fff;cursor:crosshair}
 const IG_URL='https://www.instagram.com/redemption._studios';
 const MONEDA='MXN',ENVIO_GRATIS_DESDE=1500,COSTO_ENVIO=99;
 const CUPONES={SANGRE13:13,AQUELARRE:10};
-const IMAGENES={hero:'img/look-04.webp',forzaken:'img/look-08.webp',drop:'img/look-06.webp',aquelarre:'img/look-03.webp',
+const IMAGENES={hero:'img/redemption-01.jpeg',forzaken:'img/redemption-02.jpeg',drop:'img/redemption-03.jpeg',aquelarre:'img/redemption-04.jpeg',
 lookbook:[
-{src:'img/look-08.webp',alt:'Grupo Forzaken frente a una cortina metálica, en rojo'},
-{src:'img/look-01.webp',alt:'Modelo con playera negra de corona de espinas'},
-{src:'img/look-04.webp',alt:'Dos modelos bajo los arcos de noche, en rojo'},
-{src:'img/look-03.webp',alt:'Espalda de playera negra con rostro en blanco y negro'},
-{src:'img/look-05.webp',alt:'Modelo en una máquina de peluches con marco de alambre de púas',marco:false},
-{src:'img/look-07.webp',alt:'Collage con playera blanca de tres cruces y short negro'},
-{src:'img/look-02.webp',alt:'Camisa café con estampado Redemption en la espalda'},
-{src:'img/look-09.webp',alt:'Collage con playera negra de manga larga y medias de red'},
-{src:'img/look-10.webp',alt:'Dos modelos con playeras de cruces, en rojo'},
-{src:'img/look-06.webp',alt:'Cartel Forzaken, nuevo drop de Redemption Studios'},
-{src:'img/look-11.webp',alt:'Playera gris lavada vista de espaldas'}]};
+{src:'img/redemption-02.jpeg',alt:'Grupo Forzaken frente a una cortina metálica, en rojo'},
+{src:'img/redemption-05.jpeg',alt:'Modelo con playera negra de corona de espinas'},
+{src:'img/redemption-01.jpeg',alt:'Dos modelos bajo los arcos de noche, en rojo'},
+{src:'img/redemption-04.jpeg',alt:'Espalda de playera negra con rostro en blanco y negro'},
+{src:'img/redemption-06.jpeg',alt:'Modelo en una máquina de peluches con marco de alambre de púas',marco:false},
+{src:'img/redemption-07.jpeg',alt:'Collage con playera blanca de tres cruces y short negro'},
+{src:'img/redemption-08.jpeg',alt:'Camisa café con estampado Redemption en la espalda'},
+{src:'img/redemption-09.jpeg',alt:'Collage con playera negra de manga larga y medias de red'},
+{src:'img/redemption-10.jpeg',alt:'Dos modelos con playeras de cruces, en rojo'},
+{src:'img/redemption-03.jpeg',alt:'Cartel Forzaken, nuevo drop de Redemption Studios'},
+{src:'img/redemption-11.jpeg',alt:'Playera gris lavada vista de espaldas'}]};
 const PRODUCTOS=[
-{id:'breathe-divinity',nombre:'Playera Breathe Divinity',precio:450,categoria:'playeras',fotos:['img/prod-breathe-divinity.webp'],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con el estampado Breathe Divinity en el pecho y las mangas. En la espalda, cruz con alas en blanco y rosa.'},
-{id:'conjunto-breathe',nombre:'Conjunto Breathe Divinity',precio:850,categoria:'conjuntos',fotos:['img/prod-conjunto-breathe.webp'],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con estampado en rosa y blanco, más pantalón lavado con calavera y rosas en la pierna.'},
-{id:'tiedye-metal',nombre:'Playera Tie-Dye Metal',precio:480,categoria:'playeras',fotos:['img/prod-tiedye-metal.webp'],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Azul','Rojo','Verde','Morado']},etiqueta:'Edición limitada',descripcion:'Playera con efecto tie-dye en cuatro colores, personaje de caricatura al frente y letras metal en el cuello.'},
-{id:'wolves-flames',nombre:'Playera Wolves Flames',precio:450,categoria:'playeras',fotos:['img/prod-wolves-flames.webp'],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Café','Hueso','Negro']},etiqueta:'Más vendido',descripcion:'Playera con estampado de llamas y alas en toda la espalda. Disponible en café, hueso y negro.'},
-{id:'mangas-largas',nombre:'Manga larga Jersey',precio:520,categoria:'mangas',fotos:['img/prod-mangas-largas.webp'],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Cruz de hierro','Herradura']},etiqueta:'',descripcion:'Manga larga con estampado grande al frente y detalles en las mangas. Dos diseños: cruz de hierro en bloques beige y negro, o herradura con cruz sobre negro.'},
-{id:'wolves-back',nombre:'Playera Wolves Back Print',precio:450,categoria:'playeras',fotos:['img/prod-wolves-back.webp'],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Heaven Has to Wait','Lobo y serpiente']},etiqueta:'',descripcion:'Playera negra con estampado grande en la espalda. Elige entre dos diseños.'},
-{id:'tank-lavado',nombre:'Top sin mangas lavado',precio:380,categoria:'sinmangas',fotos:['img/prod-tank-lavado.webp'],tallas:['S','M','L'],variantes:{label:'Color',opciones:['Verde','Gris']},etiqueta:'',descripcion:'Top sin mangas con efecto lavado y letras góticas grandes en la espalda.'},
-{id:'luna-relampagos',nombre:'Playera Luna y Relámpagos',precio:450,categoria:'playeras',fotos:['img/prod-luna-relampagos.webp'],tallas:['S','M','L','XL'],etiqueta:'',descripcion:'Playera negra con un personaje bajo la luna llena, relámpagos y letras góticas en contorno.'}];
+{id:'breathe-divinity',nombre:'Playera Breathe Divinity',precio:450,categoria:'playeras',fotos:['img/redemption-01.jpeg','img/redemption-02.jpeg'],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con el estampado Breathe Divinity en el pecho y las mangas. En la espalda, cruz con alas en blanco y rosa.'},
+{id:'conjunto-breathe',nombre:'Conjunto Breathe Divinity',precio:850,categoria:'conjuntos',fotos:['img/redemption-03.jpeg','img/redemption-04.jpeg'],tallas:['S','M','L','XL'],etiqueta:'Nuevo',descripcion:'Playera negra con estampado en rosa y blanco, más pantalón lavado con calavera y rosas en la pierna.'},
+{id:'tiedye-metal',nombre:'Playera Tie-Dye Metal',precio:480,categoria:'playeras',fotos:['img/redemption-05.jpeg','img/redemption-06.jpeg'],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Azul','Rojo','Verde','Morado']},etiqueta:'Edición limitada',descripcion:'Playera con efecto tie-dye en cuatro colores, personaje de caricatura al frente y letras metal en el cuello.'},
+{id:'wolves-flames',nombre:'Playera Wolves Flames',precio:450,categoria:'playeras',fotos:['img/redemption-07.jpeg','img/redemption-08.jpeg'],tallas:['S','M','L','XL'],variantes:{label:'Color',opciones:['Café','Hueso','Negro']},etiqueta:'Más vendido',descripcion:'Playera con estampado de llamas y alas en toda la espalda. Disponible en café, hueso y negro.'},
+{id:'mangas-largas',nombre:'Manga larga Jersey',precio:520,categoria:'mangas',fotos:['img/redemption-09.jpeg','img/redemption-10.jpeg'],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Cruz de hierro','Herradura']},etiqueta:'',descripcion:'Manga larga con estampado grande al frente y detalles en las mangas. Dos diseños: cruz de hierro en bloques beige y negro, o herradura con cruz sobre negro.'},
+{id:'wolves-back',nombre:'Playera Wolves Back Print',precio:450,categoria:'playeras',fotos:['img/redemption-11.jpeg','img/redemption-12.jpeg'],tallas:['S','M','L','XL'],variantes:{label:'Diseño',opciones:['Heaven Has to Wait','Lobo y serpiente']},etiqueta:'',descripcion:'Playera negra con estampado grande en la espalda. Elige entre dos diseños.'},
+{id:'tank-lavado',nombre:'Top sin mangas lavado',precio:380,categoria:'sinmangas',fotos:['img/redemption-13.jpeg','img/redemption-14.jpeg'],tallas:['S','M','L'],variantes:{label:'Color',opciones:['Verde','Gris']},etiqueta:'',descripcion:'Top sin mangas con efecto lavado y letras góticas grandes en la espalda.'},
+{id:'luna-relampagos',nombre:'Playera Luna y Relámpagos',precio:450,categoria:'playeras',fotos:['img/redemption-15.jpeg'],tallas:['S','M','L','XL'],etiqueta:'',descripcion:'Playera negra con un personaje bajo la luna llena, relámpagos y letras góticas en contorno.'}];
 const DESTACADOS=['breathe-divinity','tiedye-metal','wolves-flames'];
 const CATEGORIAS={playeras:'Playeras',mangas:'Mangas largas',sinmangas:'Sin mangas',conjuntos:'Conjuntos'};
 const NAV=[['inicio','ph-house','Inicio'],['coleccion','ph-skull','Nuevos Engendros'],['pedido','ph-package','Hacer pedido'],['lookbook','ph-camera','Lookbook'],['ritual','ph-hourglass','Próximo Ritual'],['aquelarre','ph-envelope-simple','El Aquelarre'],['contacto','ph-chat-teardrop','Contacto'],['retornos','ph-arrows-counter-clockwise','Retornos'],['privacidad','ph-eye-closed','Privacidad']];
@@ -672,12 +672,7 @@ function showLightbox(i){const t=IMAGENES.lookbook.length;lbIndex=(i+t)%t;const 
 $('#lb-prev').addEventListener('click',()=>showLightbox(lbIndex-1));
 $('#lb-next').addEventListener('click',()=>showLightbox(lbIndex+1));
 
-/* ---- Cuenta regresiva al 9 de octubre de 2026 ---- */
-const ritual=new Date(2026,9,9,23,59,59);
-$('#ritual-date').textContent=ritual.toLocaleDateString('es',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-function tick(){const d=Math.max(0,ritual-new Date()),p=n=>String(n).padStart(2,'0');
-  $('#cd-days').textContent=p(Math.floor(d/864e5));$('#mini-days').textContent=Math.floor(d/864e5);$('#cd-hours').textContent=p(Math.floor(d/36e5)%24);$('#cd-mins').textContent=p(Math.floor(d/6e4)%60);$('#cd-secs').textContent=p(Math.floor(d/1e3)%60)}
-tick();setInterval(tick,1000);
+/* ---- Cuenta regresiva al 9 de octubre de 2026 ---- */ const ritual=new Date(2026,9,9,23,59,59,999); $('#ritual-date').textContent=ritual.toLocaleDateString('es-MX',{weekday:'long',day:'numeric',month:'long',year:'numeric'}); function tick(){const d=Math.max(0,ritual-new Date()),p=n=>String(n).padStart(2,'0'); $('#cd-days').textContent=p(Math.floor(d/864e5));$('#mini-days').textContent=Math.floor(d/864e5);$('#cd-hours').textContent=p(Math.floor(d/36e5)%24);$('#cd-mins').textContent=p(Math.floor(d/6e4)%60);$('#cd-secs').textContent=p(Math.floor(d/1e3)%60); } tick(); setInterval(tick,1000);
 
 /* ---- Pedido detallado ---- */
 function setEntrega(v){entrega=v;const home=v==='Envío a domicilio';$('#addr-box').classList.toggle('hidden',!home);$('#persona-box').classList.toggle('hidden',home);$$('#addr-box .addr').forEach(i=>i.required=home);renderCart()}
@@ -725,45 +720,18 @@ $$('form.netlify-ajax').forEach(f=>f.addEventListener('submit',async e=>{
   }
   const b=f.querySelector('[type=submit]');b.disabled=true;
   try{
+    const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
+    if(!r.ok)throw 0;
     if(isOrder){
-      /* El pedido se guarda primero en Firebase. No hacemos que el checkout
-         dependa de Netlify Forms (el preview de ChatGPT/localhost no puede
-         publicar formularios en Netlify). */
       let firebaseOrderId=null;
-      try{
-        firebaseOrderId=await window.saveRedemptionOrderToFirebase({folio:lastFolio});
-      }catch(firebaseError){
-        console.error('[Redemption Studio] Firebase order error:',firebaseError);
-        const code=firebaseError?.code||'';
-        const detail=code==='PERMISSION_DENIED'||code==='database/permission-denied'
-          ?'Firebase rechazó el pedido por las reglas de Realtime Database. Revisa las reglas para usuarios autenticados.'
-          :(firebaseError?.message||'No se pudo guardar el pedido en Firebase.');
-        toast(detail);
-        return;
-      }
-      if(!firebaseOrderId)throw new Error('No hay una sesión de Firebase válida.');
-
-      /* En un sitio publicado en Netlify intentamos además registrar el
-         formulario. Si falla, el pedido de Firebase NO se pierde. */
-      try{
-        const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
-        if(!r.ok)console.warn('[Redemption Studio] Netlify Forms no respondió OK:',r.status);
-      }catch(netlifyError){
-        console.warn('[Redemption Studio] Netlify Forms no disponible en este entorno:',netlifyError);
-      }
-
+      try{firebaseOrderId=await window.saveRedemptionOrderToFirebase({folio:lastFolio});}
+      catch(firebaseError){console.error('[Redemption Studio] No se pudo guardar el pedido en Firebase:',firebaseError);}
       orderSent=true;$('#done-folio').textContent=lastFolio;
-      toast('Pedido guardado correctamente en Firebase','bone');
-      cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'});
-    }else{
-      const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
-      if(!r.ok)throw new Error('Netlify Forms respondió '+r.status);
-      toast(f.dataset.success,'bone');f.reset();
+      if(firebaseOrderId)toast('Pedido guardado en Firebase','bone');
+      cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'})
     }
-  }catch(error){
-    console.error('[Redemption Studio] Form error:',error);
-    toast('No se pudo enviar. Intenta de nuevo.');
-  }finally{b.disabled=false}
+    else{toast(f.dataset.success,'bone');f.reset()}
+  }catch{toast('No se pudo enviar. Intenta de nuevo.')}finally{b.disabled=false}
 }));
 
 /* ---- Volver arriba ---- */
