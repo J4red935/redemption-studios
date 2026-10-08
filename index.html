@@ -745,29 +745,45 @@ window.saveRedemptionOrderToFirebase = async function(extra={}){
   return ref.key;
 };
 
-/* ---- Formularios (Netlify Forms) ---- */
+/* ---- Formularios: pedidos directamente a Firebase; otros formularios usan Netlify ---- */
 $$('form.netlify-ajax').forEach(f=>f.addEventListener('submit',async e=>{
-  e.preventDefault();const isOrder=f.id==='order-form';
+  e.preventDefault();
+  const isOrder=f.id==='order-form';
+  const b=f.querySelector('[type=submit]');
   if(isOrder){
     const rf=window.RedemptionFirebase;
-    if(rf?.configured && !rf.auth?.currentUser){toast('Inicia sesión para completar el pedido');return}
     if(!cart.length){toast('Tu pedido está vacío');return}
-    prepOrder()
+    if(!rf?.configured || !rf.auth || !rf.db){toast('Firebase no está configurado. No se guardó el pedido.');return}
+    if(!rf.auth.currentUser){toast('Inicia sesión para completar el pedido');return}
+    prepOrder();
+    b.disabled=true;
+    try{
+      const customer={};
+      new FormData(f).forEach((value,key)=>{
+        if(['form-name','bot-field','f-folio','f-subtotal','f-descuento','f-envio','f-total','f-resumen'].includes(key))return;
+        if(Object.prototype.hasOwnProperty.call(customer,key)) customer[key]=Array.isArray(customer[key])?[...customer[key],String(value)]:[customer[key],String(value)];
+        else customer[key]=String(value);
+      });
+      const firebaseOrderId=await window.saveRedemptionOrderToFirebase({folio:lastFolio,customer});
+      if(!firebaseOrderId)throw new Error('Firebase no devolvió un folio de pedido.');
+      orderSent=true;$('#done-folio').textContent=lastFolio;
+      toast('Pedido guardado correctamente','bone');
+      cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'});
+    }catch(error){
+      console.error('[Redemption Studio] No se pudo guardar el pedido en Firebase:',error);
+      const code=error?.code||'';
+      if(code==='PERMISSION_DENIED'||code==='database/permission-denied')toast('Firebase rechazó el pedido. Revisa las reglas de la base de datos.');
+      else if(code==='NETWORK_ERROR'||code==='unavailable')toast('No hay conexión con Firebase. Revisa tu internet.');
+      else toast('No se guardó el pedido: '+(code||error?.message||'error desconocido'));
+    }finally{b.disabled=false}
+    return;
   }
-  const b=f.querySelector('[type=submit]');b.disabled=true;
+  b.disabled=true;
   try{
     const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
-    if(!r.ok)throw 0;
-    if(isOrder){
-      let firebaseOrderId=null;
-      try{firebaseOrderId=await window.saveRedemptionOrderToFirebase({folio:lastFolio});}
-      catch(firebaseError){console.error('[Redemption Studio] No se pudo guardar el pedido en Firebase:',firebaseError);}
-      orderSent=true;$('#done-folio').textContent=lastFolio;
-      if(firebaseOrderId)toast('Pedido guardado en Firebase','bone');
-      cart=[];coupon=null;store.set('redemption-coupon',null);f.reset();setEntrega('Envío a domicilio');saveCart();window.scrollTo({top:0,behavior:'smooth'})
-    }
-    else{toast(f.dataset.success,'bone');f.reset()}
-  }catch{toast('No se pudo enviar. Intenta de nuevo.')}finally{b.disabled=false}
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    toast(f.dataset.success,'bone');f.reset();
+  }catch(error){console.error('[Redemption Studio] Error de formulario Netlify:',error);toast('No se pudo enviar este formulario. Verifica el despliegue de Netlify.')}finally{b.disabled=false}
 }));
 
 /* ---- Volver arriba ---- */
